@@ -1,15 +1,25 @@
 body {
     margin: 2em;
-    font-family: Marion, Times New Roman, serif;
+    font-family: Adobe Caslon Pro, Times New Roman, serif;
     width: 550px;
 }
 
 h1 {
-    font-family: Marion, Times New Roman, serif;
+    font-family: Adobe Caslon Pro, Times New Roman, serif;
     font-size: 50pt;
     color: #5E0703;
 }
 
 a {
-    color: #931205;
+    color: #5E0703;
+}
+
+hr {
+    display: block;
+    height: 0.5px;
+    width: 75%;
+    border: 0;
+    border-top: 1px solid #5E0703;
+    margin: 1em 0;
+    padding: 0; 
 }
