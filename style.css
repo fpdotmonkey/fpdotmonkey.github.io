@@ -1,11 +1,25 @@
+@font-face {
+    font-family: "acp";
+    src: url("fonts/Adobe Caslon Pro.ttf");
+}
+
+@font-face {
+    font-family: "acp-b";
+    src: url("fonts/Adobe Caslon Pro Bold.ttf");
+}
+
 body {
     margin: 2em;
-    font-family: Adobe Caslon Pro, Times New Roman, serif;
+    font-family: acp, Times New Roman, serif;
     width: 550px;
 }
 
+b {
+    font-family: acp-b;
+}
+
 h1 {
-    font-family: Adobe Caslon Pro, Times New Roman, serif;
+    font-family: acp-b, Times New Roman, serif;
     font-size: 50pt;
     color: #5E0703;
 }
