@@ -8,13 +8,14 @@
 %!TEX encoding = UTF-8 Unicode
 
 \documentclass[12pt, oneside]{article}
-\usepackage[margin = 0.80in]{geometry} \geometry{letterpaper} 
+\usepackage[margin = 0.70in]{geometry} \geometry{letterpaper} 
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{amssymb}
 \usepackage{color}
 \usepackage{fontspec,xltxtra,xunicode}
 \usepackage{enumitem}
+\usepackage{hyperref}
 
 \pagenumbering{gobble}
 
@@ -40,15 +41,15 @@
 }
 
 \newcommand{\infostyle}[1] {
-	{\fontsize{10pt}{1em}\selectfont #1} \\ \vspace{9pt}
+	{\fontsize{9pt}{1em}\selectfont #1} \\ \vspace{10pt}
 }
 
 \newcommand{\redemph}[1] {
 	\hspace{-3pt}\textcolor{new_red}{#1}\hspace{-3pt}
 }
 
-\newcommand{\jobtitle}[2] {
-	{\bf #1} {#2} \vspace{-10pt} \\
+\newcommand{\jobtitle}[3] {
+	{\bf #1} {#2} • {#3} \vspace{-10pt} \\
 }
 
 \let\olditemize\itemize
@@ -59,8 +60,13 @@
   \setlength{\parsep}{0pt}
 %  \setlength{\topsep}{0pt}
 }
-\renewcommand{\labelitemi}{–}
+\renewcommand{\labelitemi}{--}
 \setlist[itemize]{leftmargin = 16pt}
+
+\hypersetup{
+  colorlinks, urlcolor=new_red
+}
+\urlstyle{same}
 
 \begin{document}
 
@@ -71,37 +77,49 @@
 \titlestyle{Fletcher Porter}
 \infostyle{Monrovia, CA • 626-321-6687 • me@FletcherPorter.com • http://FletcherPorter.com • Class of 2019}
 
-\headingstyleJobs{Employment}
 
-\jobtitle{NASA Jet Propulsion Laboratory}{(Robotics Intern) — Summer 2016}
+\headingstyleJobs{Education}
+
+%\jobtitle{Monrovia High School,}{graduated June 2015}\vspace{-15pt}
+%\begin{itemize}
+%	\item AP Physics C: Mechanics; AP Physics C: E\&M; AP Calculus AB; AP Chemistry; AP Statistics
+%\end{itemize}\vspace{-7pt}
+
+\jobtitle{University of California, Santa Barbara (UCSB)}{}{Graduation 2019}
 \begin{itemize}
-	\item Performed test on the drivetrain for the OWMS Deep Subsurface Access probe
+	\item B.S. in Mechanical Engineering
+	\item Relevant coursework: Writing 50E, proposal writing for engineers; ME 12S, intro machine shop; ME 14, Statics; ME 15, Strength of Materials; ME 16, Dynamics (expected); ME 6, Circuits
+	\item Won the UCSB Engineering Writing Program Excellence Award for Multimedia Writing for \textit{Optical PAyload for Lasercomm Science (OPALS)} Wikipedia Article (20 May 2016)
+\end{itemize}
+
+
+\headingstyleJobs{Relevant Experience}
+
+\jobtitle{NASA Jet Propulsion Laboratory (JPL)}{(Robotics Intern)}{Summer 2016}
+\begin{itemize}
+	\item Performed drivetrain test on the Ocean Worlds Mobility and Sensing (OWMS) Deep Subsurface Access Probe
 	\item Added actuation to the OWMS Lander Proximity test
-	\item Created models for a level wind on Deep Subsurface Access probe
-	\item Produced figures for OWMS mission proposal
+	\item Created models for a level wind on Deep Subsurface Access Probe
+	\item Produced figures for OWMS mission proposal and conference publication
 	\item Designed drivetrain and level wind for Deep Subsurface Access Probe
 	\item Aided in design of Deep Subsurface Access Probe Sample Transfer Mechanism
 \end{itemize}
 
-\jobtitle{UCSB Robotics Laboratory}{(Undergraduate Researcher) — 2015–Present}
+\jobtitle{UCSB Robotics Laboratory}{(Undergraduate Researcher)}{2015–Present}
 \begin{itemize}
 	\item Advised by Professor Katie Byl
 	\item Designed roller skates to increase locomotive speed of RoboSimian
-	\item Designing feet with gecko adhesive pads for Boston Dynamics LittleDog robot
+	%\item Designing feet with gecko adhesive pads for Boston Dynamics LittleDog robot
 \end{itemize}
 
-\jobtitle{NASA Jet Propulsion Laboratory}{(Robotics Intern) — Summer 2014}
+\jobtitle{NASA Jet Propulsion Laboratory}{(Robotics Intern)}{Summer 2014}
 \begin{itemize}
-	\item Aided in the design of the Cam Hand for the JPL DRC entry RoboSimian
+	\item Designed part of the Cam Hand for the JPL DARPA Robotics Challenge entry RoboSimian
 	%\item Designed ventilation system for the in-lab laser cutter
 	\item Conducted experiments to learn the behavior of gecko adhesive pads after many cycles
-	\item Aided in design of stewart platform for testing an astroid gripper in zero-g
 \end{itemize}
 
-
-\headingstyleJobs{Activities}
-
-\jobtitle{FIRST Robotics}{(Mentor) — 2011–Present}
+\jobtitle{FIRST Robotics}{(Mentor)}{2011–Present}
 \begin{itemize}
 	\item Presented on success metrics for engineering at 2016 kickoff
 	\item Helped students learn how to use SolidWorks
@@ -109,7 +127,14 @@
 	%\item Led design of competition robot
 	%\item Wrote autonomous programs using encoders and line detection to improve repeatability
 	%\item Designed and tested a mount to attach controllers to robots, DFM for CNC and injection moulding
-\end{itemize}\vspace{-7pt}
+\end{itemize}
+
+\jobtitle{Eagle Scout Service Project}{}{19 Aug. 2013}
+\begin{itemize}
+	\item Prepared bins of emergency supplies for Wildrose Elementary School in Monrovia, Calif.
+	\item Fundraised \$400 in supplies and donations for the project
+	\item Led 19 people in collecting and filling the bins
+\end{itemize}%\vspace{-7pt}
 
 %\jobtitle{Boy Scout Troop 147}{(Eagle Scout) — 2008–2015}\vspace{-15pt}
 %\begin{itemize}
@@ -136,41 +161,30 @@
 %\end{itemize}
 
 
-\headingstyleJobs{Education}
-
-%\jobtitle{Monrovia High School,}{graduated June 2015}\vspace{-15pt}
-%\begin{itemize}
-%	\item AP Physics C: Mechanics; AP Physics C: E\&M; AP Calculus AB; AP Chemistry; AP Statistics
-%\end{itemize}\vspace{-7pt}
-
-\jobtitle{University of California, Santa Barbara,}{expected graduation 2019}
-\begin{itemize}
-	\item Majoring in Mechanical Engineering
-	\item Relevant coursework includes Writing 50E, proposal writing for engineers and ME 12S, intro machine shop
-\end{itemize}
-
-
-\headingstyleSJobs{Skills and Interests}
+\headingstyleSJobs{Skills}
 
 \begin{itemize}
 	\item Experience with SolidWorks CAD and PDM \\
-	\item Certified for traditional machining at the UCSB machine shop \\
-	\item DFM for 3-D printing, laser cutting, and traditional machining \\
-	\item Programming in C++, Python, Matlab, \LaTeX, and Mathematica \\
+	\item Familiar with design for and operation of tradition machining equipment and 3-D printing
+	%\item Certified for traditional machining at the UCSB machine shop \\
+	%\item DFM for 3-D printing, laser cutting, and traditional machining \\
+	\item Capable programming in C++, Python, Matlab, \LaTeX, and Mathematica \\
 	%\item Documentation in engineering notebooks \\
-	\item CPR Pro and Wilderness First Aid certified \\ %\vspace{13pt}
+	%\item CPR Pro and Wilderness First Aid certified \\ %\vspace{13pt}
 \end{itemize}
 
 
 \headingstyleSJobs{Awards}
 
 \begin{itemize}
-	\item UCSB Engineering Writing Program Excellence Award for Multimedia Writing for \textit{Optical PAyload for Lasercomm Science} Wikipedia Article
+	\item Coauthor on \textit{A Deep Subsurface Ice Probe for Europa}, publication pending in IEEE Aerospace Conference proceedings, March 2017
 	%\item FIRST: Think Award, Inspire Award, Finalist Alliance, Gracious Professionalism Award (x4) \\
-	\item Louis Armstrong Award
-	\item Eagle Scout Rank, Boy Scouts of America
+	%\item Louis Armstrong Award
+	\item Eagle Scout Rank, Boy Scouts of America (30 Oct. 2014)
 	%\item Monrovia High School Math and Science Academy Graduate
 \end{itemize}
+
+\textit{A portfolio of my work can be found at} \url{http://portfolium.com/fporter}
 
 \end{flushleft}
 \end{document}  
