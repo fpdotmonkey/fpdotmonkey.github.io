@@ -16,10 +16,18 @@
 \usepackage{fontspec,xltxtra,xunicode}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
 \pagenumbering{gobble}
 
 % Formatting Functions
+
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
 
 \defaultfontfeatures{Mapping=tex-text}
 \setromanfont[Mapping = tex-text]{Adobe Caslon Pro}
@@ -75,114 +83,72 @@
 % Content
 
 \titlestyle{Fletcher Porter}
-\infostyle{Santa Barbara, CA • 626-321-6687 • me@FletcherPorter.com • http://FletcherPorter.com • Class of 2019}
+\infostyle{+1 (626) 321-6687 • me@FletcherPorter.com • http://FletcherPorter.com • Class of 2019}
 
 
 \headingstyleJobs{Education}
 
-%\jobtitle{Monrovia High School,}{graduated June 2015}\vspace{-15pt}
-%\begin{itemize}
-%	\item AP Physics C: Mechanics; AP Physics C: E\&M; AP Calculus AB; AP Chemistry; AP Statistics
-%\end{itemize}\vspace{-7pt}
-
-\jobtitle{University of California, Santa Barbara (UCSB)}{}{Graduation 2019}
+\jobtitle{University of California, Santa Barbara (UCSB)}{}{Graduation June 2019}
 \begin{itemize}
 	\item B.S. in Mechanical Engineering
-	\item Relevant coursework: Writing 50E, proposal writing for engineers; ME 12S, intro machine shop; ME 14, Statics; ME 15, Strength of Materials; ME 16, Dynamics (expected); ME 6, Circuits
-	\item Won the UCSB Engineering Writing Program Excellence Award for Multimedia Writing for \textit{Optical PAyload for Lasercomm Science (OPALS)} Wikipedia Article (20 May 2016)
+	\item Exchange studies from August 2017 to June 2018 at Lunds Tekniska Högskola in Lund, Sweden
 \end{itemize}
 
 
-\headingstyleJobs{Relevant Experience}
+\headingstyleJobs{Experience}
 
-\jobtitle{NASA Jet Propulsion Laboratory (JPL)}{(Robotics Intern)}{Summer 2016}
+\jobtitle{NASA/JPL Internship}{Ocean Worlds Mobility and Sensing}{14 June 2016–26 Aug. 2016}
+\def\HrefFont{\em}
 \begin{itemize}
-	\item Performed drivetrain test on the Ocean Worlds Mobility and Sensing (OWMS) Deep Subsurface Access Probe
-	\item Added actuation to the OWMS Lander Proximity test
-	\item Created models for a level wind on Deep Subsurface Access Probe
-	\item Produced figures for OWMS mission proposal and conference publication
-	\item Designed drivetrain and level wind for Deep Subsurface Access Probe
-	\item Aided in design of Deep Subsurface Access Probe Sample Transfer Mechanism
+	\item B. H. Wilcox, J. A. Carlton, J. M. Jenkins and F. Porter, ``A deep subsurface ice probe for Europa,'' 2017 IEEE Aerospace Conference, Big Sky, MT, 2017, pp. 1-13.
+	\item Designed an original concept of a level wind for Deep Subsurface Access (DSA) probe with SolidWorks
+	%\item Performed testing on DSA drivetrain and created a plan to verify the design for integration into the larger assembly
+	\item Performed testing on DSA drivetrain to verify the design for the larger assembly
+	\item Provided creative ideas for a sample transfer mechanism on the DSA probe
+	\item Designed, built, and tested the actuation mechanism for the Lander Proximity mechanism
+	\item Managed versions of CAD models using SolidWorks PDM
 \end{itemize}
 
-\jobtitle{UCSB Robotics Laboratory}{(Undergraduate Researcher)}{2015–Present}
+\jobtitle{NASA/JPL and UCSB Robotics Lab Internship}{RoboSimian}{June–Aug. 2014, Oct. 2015–May 2016}
 \begin{itemize}
-	\item Advised by Professor Katie Byl
-	\item Designed roller skates to increase locomotive speed of RoboSimian
-	%\item Designing feet with gecko adhesive pads for Boston Dynamics LittleDog robot
-\end{itemize}
-
-\jobtitle{NASA Jet Propulsion Laboratory}{(Robotics Intern)}{Summer 2014}
-\begin{itemize}
-	\item Designed part of the Cam Hand for the JPL DARPA Robotics Challenge entry RoboSimian
-	%\item Designed ventilation system for the in-lab laser cutter
-	\item Conducted experiments to learn the behavior of gecko adhesive pads after many cycles
-\end{itemize}
-
-\jobtitle{FIRST Robotics}{(Mentor)}{2011–Present}
-\begin{itemize}
-	\item Presented on success metrics for engineering at 2016 kickoff
-	\item Helped students learn how to use SolidWorks
-	\item Team member 2011–2015, Team Captain 2015, Business Manager 2014
-	%\item Led design of competition robot
-	%\item Wrote autonomous programs using encoders and line detection to improve repeatability
-	%\item Designed and tested a mount to attach controllers to robots, DFM for CNC and injection moulding
-\end{itemize}
-
-\jobtitle{Eagle Scout Service Project}{}{19 Aug. 2013}
-\begin{itemize}
-	\item Prepared bins of emergency supplies for Wildrose Elementary School in Monrovia, Calif.
-	\item Fundraised \$400 in supplies and donations for the project
-	\item Led 19 people in collecting and filling the bins
-\end{itemize}%\vspace{-7pt}
-
-%\jobtitle{Boy Scout Troop 147}{(Eagle Scout) — 2008–2015}\vspace{-15pt}
-%\begin{itemize}
-%	\item Senior Patrol Leader at three consecutive summer camps
-%	\item Patrol Leader of Eagle Patrol for two years
-%	\item Went on two 100+ km backpacking trips at Philmont Scout Ranch with leadership capacity
-%\end{itemize}\vspace{-7pt}
-
-%\jobtitle{Monrovia High School Band}{(Treasurer) — 2011–2015}
-%\begin{itemize}
-%	\item French horn section leader, 2 1/2 years \\
-%	%\item Marched in the National Memorial Day Parade in Washington, D.C. \%\
-%	%\item Played 2nd Horn at Carnegie Hall \\
-%	\item 1st Horn in Pasadena Youth Symphony Orchestra Philharmonic \\
-%	\item Study trumpet privately with Nolan Shaheed \\
-%\end{itemize}
-
-%\jobtitle{UCSB Music}{Trumpet and French horn — 2015–Present}\vspace{-15pt}
-%\begin{itemize}
-%	\item Playing trumpet in Jazz ensemble
-%   \item Playing French horn in the student-led Pops Orchestra
-%   \item Performed a bunch of Count Basie stuff
-%	\item improvisation?
-%\end{itemize}
-
-
-\headingstyleSJobs{Skills}
-
-\begin{itemize}
-	\item Experience with SolidWorks CAD and PDM \\
-	\item Familiar with design for and operation of tradition machining equipment and 3-D printing
-	%\item Certified for traditional machining at the UCSB machine shop \\
-	%\item DFM for 3-D printing, laser cutting, and traditional machining \\
-	\item Capable programming in C++, Python, Matlab, \LaTeX, and Mathematica \\
-	%\item Documentation in engineering notebooks \\
-	%\item CPR Pro and Wilderness First Aid certified \\ %\vspace{13pt}
+	\item RoboSimian is the NASA/JPL entry into the DARPA Robotics Challenge, a competition to create a disaster recovery robot
+	\item Designed in SolidWorks mechanical components for a novel robotic manipulator called the Cam Hand
+	\item Rapid prototyped components using a laser cutter and 3-D printer to aid iterative design
+	\item Developed roller skates for the robot to increase locomotive speed from $\SI{0.1}{\meter\per\second}$ to at least $\SI{5}{\meter\per\second}$
 \end{itemize}
 
 
-\headingstyleSJobs{Awards}
+\headingstyleJobs{Projects}
 
+\jobtitle{FIRST Tech Challenge}{Student Robotics Mentor}{June 2015–Present}
 \begin{itemize}
-	\item Coauthor on \textit{A Deep Subsurface Ice Probe for Europa}, publication pending in IEEE Aerospace Conference proceedings, March 2017
-	%\item FIRST: Think Award, Inspire Award, Finalist Alliance, Gracious Professionalism Award (x4) \\
-	%\item Louis Armstrong Award
-	\item Eagle Scout Rank, Boy Scouts of America (30 Oct. 2014)
-	%\item Monrovia High School Math and Science Academy Graduate
+	\item Teach high school students engineering design process, including ideation, CAD, iteration, and testing
 \end{itemize}
+
+\jobtitle{Applied Mechatronics Course Design Project}{}{Aug. 2017–Present}
+\begin{itemize}
+	\item Design, build, and test a system to give either velocity or position control to a motor, including building a serial connection, an AVR board, and a PI controller.
+	\item Develope a compressed-air cleaning system for a camera window for Axis Communications
+\end{itemize}
+
+\jobtitle{Finite Element Method Course Projects}{}{Aug. 2017–Present}
+\begin{itemize}
+	\item Writing FEM simulation programs in Matlab using the CALFEM package
+\end{itemize}
+
+\jobtitle{Computer Music Generation System}{}{Sept.–April 2014}
+\begin{itemize}
+	\item Wrote a C++ program that produced audio tones by sending signals to the computer's sound card
+\end{itemize}
+
+
+\headingstyleJobs{Publications}
+
+\vspace{-9pt}
+\nocite{OWMS-DSA}
+\bibliography{bananas}
+\bibliographystyle{ieeetr}
+
 
 \textit{A portfolio of my work can be found at} \url{http://portfolium.com/fporter}
 
