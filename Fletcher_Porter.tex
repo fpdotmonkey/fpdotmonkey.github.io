@@ -15,7 +15,7 @@
 \usepackage{fontspec,xltxtra,xunicode}
 \usepackage{enumitem}
 \usepackage{hyperref}
-\usepackage{siunitx}
+\usepackage[per-mode=symbol]{siunitx}
 \usepackage{url}
 \usepackage{etoolbox}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
@@ -31,22 +31,23 @@
 \renewcommand\@biblabel[1]{}
 \makeatother
 
-\defaultfontfeatures{Mapping=tex-text}
-\setromanfont[Mapping = tex-text]{Adobe Caslon Pro}
-
 \definecolor{new_red}{RGB}{94, 7, 3}
 
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[]{Bona Nova}
+\setsansfont[]{PT Sans Narrow Bold}
+
 \newcommand{\titlestyle}[1] {
-	{\fontsize{50pt}{1em}\selectfont \bf \textcolor{new_red}{#1}} \\
+	{\fontsize{50pt}{1em}\selectfont \textcolor{new_red}{\textsf{#1}}} \\
 }
 
 \newcommand{\headingstyleJobs}[1] {
-	{\fontsize{20pt}{1em}\selectfont \bf \textcolor{new_red}{#1}}
+	{\fontsize{19pt}{1em}\selectfont \textcolor{new_red}{\textsf{#1}}}
 	\textcolor{new_red}{\rule{3.25in}{0.5pt}} \vspace{3pt}
 }
 
 \newcommand{\headingstyleSJobs}[1] {
-	{\fontsize{20pt}{1em}\selectfont \bf \textcolor{new_red}{#1}}
+	{\fontsize{20pt}{1em}\selectfont \textcolor{new_red}{\textsf{#1}}}
 	\textcolor{new_red}{\rule{3.25in}{0.5pt}} \vspace{-10pt}
 }
 
@@ -59,7 +60,7 @@
 }
 
 \newcommand{\jobtitle}[3] {
-	{\bf #1} {#2} • {#3} \vspace{-10pt} \\
+	{\bf #1} {#2} · {#3} \vspace{-10pt} \\
 }
 
 \let\olditemize\itemize
@@ -88,17 +89,17 @@
 %%%%%%%%%%%
 
 \titlestyle{Fletcher Porter}
-\infostyle{+1 (626) 321-6687 • me@FletcherPorter.com • http://FletcherPorter.com • Class of 2019}
+\infostyle{+1 (626) 321-6687 · me@FletcherPorter.com · http://FletcherPorter.com · Class of 2019}
 
 
 \headingstyleJobs{Education}
 
 \jobtitle{University of California, Santa Barbara (UCSB)}{}{Graduation June 2019}
 \begin{itemize}
-	\item B.S. in Mechanical Engineering
-	\item Exchange studies from Aug. 2017 to June 2018 at Lunds Tekniska Högskola (LTH) in Lund, Sweden
-	\item Courses in robotics at UCSB
-	\item Courses in design with polymer composite materials and in hydrogen fuel cells at LTH
+	\item Bachelor's in Mechanical Engineering
+	\item Exchange study from Aug. 2017 to June 2018 at Lunds Tekniska Högskola (LTH) in Lund, Sweden
+	\item Courses in robotic control at UCSB including physics-based modeling
+	\item Course in design with polymer composite materials
 \end{itemize}
 
 
@@ -106,27 +107,28 @@
 
 \jobtitle{NASA/JPL Internship}{Robotic Mobility on Icy Moons}{11 June 2018–7 Aug. 2018}
 \begin{itemize}
-	\item Designed the mechanical, electrical, and control systems for a gravity-offload system that will be used to study robotic mobility for future missions to icy moons like Enceladus
-	\item Worked extensively with the disaster recovery robot RoboSimian to conduct tests
-	\item Generated concepts for a sampling system to take to study soil in Death Valley, California
+	\item Designed and led the fabrication and assembly of the mechanical and electrical systems for a gravity-offload system (GOS)  used to study robotic mobility for future missions to icy moons
+	\item Developed and implemented a control system for the GOS which uses computer vision
+	\item Operated the disaster recovery robot RoboSimian to conduct tests
+	\item Conceived new robotic systems for a sampling system to study soil in Death Valley, California
 \end{itemize}
 
 \jobtitle{NASA/JPL Internship}{Ocean Worlds Mobility and Sensing}{14 June 2016–26 Aug. 2016}
 \def\HrefFont{\em}
 \begin{itemize}
-	\item B. H. Wilcox, J. A. Carlton, J. M. Jenkins and F. Porter, ``A deep subsurface ice probe for Europa,'' in \textit{2017 IEEE Aerospace Conference}, pp. 1–13, March 2017.
-	\item Created an original concept for a level wind for the Deep Subsurface Access (DSA) probe
+	\item Designed a level wind for the Deep Subsurface Access (DSA) probe
 	\item Performed testing on DSA drivetrain to verify the design for the larger assembly
 	\item Generated creative ideas for a sample transfer mechanism on the DSA probe
-	\item Designed, built, and tested the actuation mechanism for an extensible arm for sampling on Europa
+	\item Designed, built, and tested the actuation for an extensible arm for sampling on Europa
 %	\item Managed versions of CAD models using SolidWorks PDM
 \end{itemize}
 
 \jobtitle{NASA/JPL and UCSB Robotics Lab Internship}{RoboSimian}{June–Aug. 2014, Oct. 2015–May 2016}
 \begin{itemize}
+	\item Worked in the UCSB robotics lab with Katie Byl
 	\item Designed components for a novel robotic manipulator for RoboSimian
-	\item Rapid prototyped components using a laser cutter and 3-D printer to aid iterative design
-	\item Developed roller skates for the robot to increase locomotive speed from $\SI{0.1}{\meter\per\second}$ to at least $\SI{5}{\meter\per\second}$
+	\item Rapid prototyped components using a laser cutter and 3D printer to aid iterative design
+	\item Developed roller skates for RoboSimian to significantly increase locomotive speed 
 \end{itemize}
 
 
@@ -134,17 +136,17 @@
 
 \jobtitle{Northrup Grumman and UCSB}{Sensitive Electronics Carrying Case}{Sept. 2018–In Progress}
 \begin{itemize}
-	\item Will be designing a container for sensitive electronics that will isolate vibrations from a person carrying it or being transported in a car
+	\item Designing a system to carry sensitive electronics to a test area while damping shock loads and reducing the load the carried by the user
 \end{itemize}
 
-\jobtitle{Applied Mechatronics Course Design Project}{Camera Window Cleaning System}{Aug. 2017–Present}
+\jobtitle{Mechatronics Course Design Project}{Camera Window Cleaning System}{Aug. 2017–May 2018}
 \begin{itemize}
-	\item Designed and built a compressed-air security cameras window cleaning for Axis Communications 
+	\item Designed and built a compressed-air cleaning system for Axis Communications Security cameras 
 \end{itemize}
 
 \jobtitle{FIRST Tech Challenge}{Student Robotics Mentor}{June 2015–Present}
 \begin{itemize}
-	\item Teach high school students engineering design process, including ideation, CAD, iteration, and testing
+	\item Teaching high school students engineering design
 \end{itemize}
 
 %\jobtitle{Finite Element Method Course Projects}{}{Aug. 2017–Present}

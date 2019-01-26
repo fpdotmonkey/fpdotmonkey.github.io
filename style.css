@@ -1,26 +1,38 @@
 @font-face {
-    font-family: "acp";
-    src: url("fonts/Adobe Caslon Pro.ttf");
+    font-family: "BonaNova";
+    src: url("fonts/BonaNova-Regular.otf");
 }
 
 @font-face {
-    font-family: "acp-b";
-    src: url("fonts/Adobe Caslon Pro Bold.ttf");
+    font-family: "BonaNova";
+    src: url("fonts/BonaNova-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "PTSans";
+    src: url("fonts/PTSans.otf");
+                     
 }
 
 body {
     margin: 2em;
-    font-family: acp, Times New Roman, serif;
-    width: 550px;
+    auto;
+    max-width: 36em;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+    padding: 0 10px;
+    font-family: BonaNova, serif;
 }
 
 b {
-    font-family: acp-b;
 }
 
 h1 {
-    font-family: acp-b, Times New Roman, serif;
-    font-size: 50pt;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 70pt;
+    line-height: 1.2;
     color: #5E0703;
 }
 
