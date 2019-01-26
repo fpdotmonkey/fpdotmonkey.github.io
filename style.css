@@ -13,7 +13,7 @@ body {
     margin: 2em;
     auto;
     max-width: 47em;
-    font-size: 100%;
+    font-size: 120%;
     line-height: 1.6;
     color: #000000;
     padding: 0 10px;
@@ -25,7 +25,7 @@ b {
 
 h1 {
     font-family: "PT Sans Narrow", sans-serif;
-    font-size: 5em;
+    font-size: 6em;
     font-weight: bold;
     line-height: 1.2;
     color: #5E0703;
