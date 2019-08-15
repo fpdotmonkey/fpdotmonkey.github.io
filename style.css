@@ -9,6 +9,13 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: "BonaNova";
+    src: url("Fonts/BonaNova-Italic.otf");
+    font-style: italic;
+}
+
+
 body {
     margin: 2em;
     auto;
@@ -21,6 +28,9 @@ body {
 }
 
 b {
+}
+
+i {
 }
 
 h1 {
