@@ -1,11 +1,11 @@
 @font-face {
     font-family: "BonaNova";
-    src: url("fonts/BonaNova-Regular.otf");
+    src: url("Fonts/BonaNova-Regular.otf");
 }
 
 @font-face {
     font-family: "BonaNova";
-    src: url("fonts/BonaNova-Bold.otf");
+    src: url("Fonts/BonaNova-Bold.otf");
     font-weight: bold;
 }
 
