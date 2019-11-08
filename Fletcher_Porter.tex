@@ -1,5 +1,5 @@
 %
-% Fletcher_Porter.tex
+% FletcherPorter.tex
 %
 % Copyright (c) 2019 Fletcher Porter
 %
@@ -11,13 +11,15 @@
 \usepackage[margin = 0.70in]{geometry} \geometry{letterpaper} 
 \usepackage{graphicx}
 \usepackage{amssymb}
-\usepackage{color}
+\usepackage{color,soul}
 \usepackage{fontspec,xltxtra,xunicode}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage[per-mode=symbol]{siunitx}
 \usepackage{url}
 \usepackage{etoolbox}
+\usepackage{siunitx}
+%\usepackage{textcomp}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
 \pagenumbering{gobble}
@@ -60,7 +62,7 @@
 }
 
 \newcommand{\jobtitle}[3] {
-	{\bf #1} · {#2} · {#3} \vspace{-10pt} \\
+	{\bf #1} · {#2} · {#3} \vspace{-7pt} \\
 }
 
 \let\olditemize\itemize
@@ -75,7 +77,8 @@
 \setlist[itemize]{leftmargin = 17pt}
 
 \hypersetup{
-  colorlinks, urlcolor=new_red
+  colorlinks,
+  urlcolor=new_red
 }
 \urlstyle{same}
 
@@ -89,73 +92,101 @@
 %%%%%%%%%%%
 
 \titlestyle{Fletcher Porter}
-\infostyle{+1 (626) 321-6687 · me@fletcherporter.com · http://fletcherporter.com · Class of 2019}
+\infostyle{+1 (626) 321-6687 · \href{mailto:me@fletcherporter.com}{me@fletcherporter.com} · \url{http://fletcherporter.com} · Class of 2019}
 
 
 \headingstyleJobs{Education}
 
-\jobtitle{University of California, Santa Barbara (UCSB)}{Bachelors}{Graduated August 2019}
+\jobtitle{University of California, Santa Barbara (UCSB)}{BS Mechanical Engineering}{Graduated 2019-08}
 \begin{itemize}
-	\item Major in Mechanical Engineering \\
-	\item Exchange study from Aug. 2017 to June 2018 at Lunds Tekniska Högskola (LTH) in Lund, Sweden \\
-	\item Courses in robotic control at UCSB including physics-based modeling \\
+	\item Exchange study from 2017-08 to 2018-06 at Lunds Tekniska Högskola (LTH) in Lund, Sweden \\
+%	\item Courses in robotic control at UCSB including physics-based modeling \\
 	\item Courses in design with polymer composite materials, batteries, and fuel cells at LTH
 \end{itemize}
+
+%\jobtitle{Monrovia High School}{High School Diploma}{Graduated June 2015}
+%\vspace{1em}
 
 
 \headingstyleJobs{Experience}
 
-\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{11 June 2018–7 Sep. 2018}
+\jobtitle{NASA Jet Propulsion Laboratory}{Gravity-Offload System}{2018-06-11 – 2018-09-07}
 \begin{itemize}
-	\item Designed and led the fabrication and assembly of the mechanical and electrical systems for a gravity-offload system (GOS)  used to study robotic mobility for future missions to icy moons \\
-	\item Developed and implemented a control system for the GOS that uses computer vision \\
-	\item Operated the disaster recovery robot RoboSimian to conduct tests \\
-	\item Conceived novel robotic systems for a sampling system to study soil in Death Valley, California
+	\item Developed a system to study robotic mobility for missions to icy moons \\
+	\item Designed in SolidWorks a mechanical system to offload gravity with minimal lateral forces \\
+	\item Made engineering drawings of mechanical components to send to vendors to machine \\
+	\item Designed an electrical system to distribute power to microprocessors that control the system \\
+	\item Assembled the mechanical and electrical systems by hand \\
+	\item Wrote automatic control programs with documentation in Python and Arduino C
+\end{itemize}
+%
+%\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{11 June 2018–7 Sep. 2018}
+%\begin{itemize}
+%	\item Designed and led the fabrication and assembly of the mechanical and electrical systems for a gravity-offload system (GOS)  used to study robotic mobility for future missions to icy moons \\
+%	\item Developed and implemented a control system for the GOS that uses computer vision \\
+%	\item Operated the disaster recovery robot RoboSimian to conduct tests \\
+%	\item Conceived novel robotic systems for a sampling system to study soil in Death Valley, California
+%\end{itemize}
+
+\jobtitle{Hawkes Group, UCSB}{Vine Robots}{2019-03 – 2019-09}
+\begin{itemize}
+	\item Iteratively designed a fixture to hold tools on the end of \href{https://portfolium.com/entry/vine-robot-tool-mount}{a soft, vine-like robot} in SolidWorks
+	\item Built these fixtures by making them on a 3D printer and assembling them 
+	\item Documented design process and results
 \end{itemize}
 
-\jobtitle{Hawkes Group, UCSB}{Undergraduate Researcher}{March 2019—Sep. 2019}
+\jobtitle{Capstone Course Design Project (UCSB)}{Automatic Stair Climbing Vehicle}{2018-09 – 2019-06}
 \begin{itemize}
-	\item Developed soft robots for application in aircraft wing inspection \\
-	\item Designed magnetic tool mounts for soft, vine-like robots \\
-	\item Developed models for jump height of a carbon fiber-bow jumping robot
+	\item Designed in SolidWorks \href{https://portfolium.com/entry/automatic-stair-climbing-vehicle}{a dolly that climbs stairs} while carrying a heavy payload
+	\item Created manufacturing drawing of all custom components in the system
+	\item Machined most custom components by hand on a mill and lathe
+	\item Reported the design process and results
+%	\item Developed models for jump height of a carbon fiber-bow jumping robot
 \end{itemize}
 
-\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{14 June 2016–26 Aug. 2016}
-\def\HrefFont{\em}
+\jobtitle{NASA Jet Propulsion Laboratory}{Ocean Worlds Mobility and Sensing}{2016-06-14 – 2016-08-26}
 \begin{itemize}
-	\item Designed a level wind for the Deep Subsurface Access (DSA) probe \\
-	\item Performed testing on DSA drivetrain to verify the design for the larger assembly \\
-	\item Generated creative ideas for a sample transfer mechanism on the DSA probe \\
-	\item Designed, built, and tested the actuation for an extensible arm for sampling on Europa
-%	\item Managed versions of CAD models using SolidWorks PDM
+	\item Developed a proposal for \href{https://portfolium.com/entry/owms-deep-subsurface-access-level-wind}{a probe to bore \textasciitilde$\SI{20}{\kilo\meter}$ into Europa's icy crust}
+	\item Designed components to demonstrate the feasibility of the proposed system
+	\item Performed a test with a robot arm to demonstrate the proposed boring method
+	\item Created drawings for parts to manufacture and to get ROM quotes
 \end{itemize}
 
-\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{June–Aug. 2014, Oct. 2015–May 2016}
+\jobtitle{Mechatronics Course Design Project (LTH)}{Camera Cleaning System}{2017-08-28 – 2018-05-15}
 \begin{itemize}
+	\item Designed and built \href{https://portfolium.com/entry/automatic-security-camera-lens-cleaner}{a mechanical system for cleaning security cameras}
+	\item Documented the design process and results in a report
+\end{itemize}
+
+\jobtitle{NASA Jet Propulsion Laboratory}{RoboSimian Cam Hand}{2014-06-09 – 2014-08-12}
+\begin{itemize}
+	\item Designed components of \href{https://portfolium.com/entry/rescue-robots}{a robot manipulator} in SolidWorks and iterated on the design
 %	\item Worked in the UCSB robotics lab with Katie Byl
-	\item Designed components for a novel robotic manipulator for RoboSimian \\
-	\item Rapid prototyped components using a laser cutter and 3D printer to aid iterative design \\
-	\item Developed roller skates for RoboSimian to significantly increase locomotive speed
+%	\item Developed roller skates for RoboSimian to significantly increase locomotive speed
 \end{itemize}
 
-
-\headingstyleJobs{Projects}
-
-\jobtitle{Capstone Course Design Project (UCSB)}{Automatic Stair Climbing Vehicle}{Sep. 2018–June 2019}
+\jobtitle{Robotic Planning and Kinematics Class}{UCSB ME 179P}{2019-01-07 – 2018-03-19}
 \begin{itemize}
-	\item Designed, built, and tested a motorized dolly that climbs stairs while carrying a heavy payload \\
-	\item Machined most of the not-off-the shelf components by hand with a mill and lathe
+	\item Wrote \href{https://github.com/fpdotmonkey/ME179P}{planning and kinematics programs} in Python
+	\item Documented code with Python docstrings
 \end{itemize}
 
-\jobtitle{Mechatronics Course Design Project (LTH)}{Camera Cleaning System}{Aug. 2017–May 2018}
+\jobtitle{Robotic Controls Class}{UCSB ME 179D}{2018-09-27 – 2018-12-11}
 \begin{itemize}
-	\item Designed and built a lens cleaning system for Axis Communications security cameras
+	\item Wrote control programs for robot arms in Matlab and Simulink
 \end{itemize}
 
-\jobtitle{FIRST Tech Challenge}{Student Robotics Mentor}{June 2015–Present}
-\begin{itemize}
-	\item Teaching high school students engineering design
-\end{itemize}
+%\jobtitle{CNC Router PCB Fixture}{Personal Project}{2019-10-16 – 2019-11-08}
+%\begin{itemize}
+%	\item Designed a fixture in OnShape to hold a PCB while it's being machined
+%	\item Created manufacturing drawings of all custom components
+%	\item Machined components on a CNC router
+%\end{itemize}
+
+%\jobtitle{FIRST Tech Challenge}{Student Robotics Mentor}{June 2015–Present}
+%\begin{itemize}
+%	\item Teaching high school students engineering design
+%\end{itemize}
 
 %\jobtitle{Finite Element Method Course Projects}{}{Aug. 2017–Present}
 %\begin{itemize}
@@ -171,12 +202,12 @@
 \headingstyleJobs{Publications}
 
 \vspace{-9pt}
-\nocite{OWMS-DSA}
+\nocite{OWMS}
 \bibliography{bananas}
 \bibliographystyle{ieeetr}
 
 
-\textit{A portfolio of my work can be found at} \url{http://portfolium.com/fporter}
+\textit{A portfolio of my work can be found at} \url{http://portfolium.com/fporter/portfolio}
 
 \end{flushleft}
 \end{document}  
