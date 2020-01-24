@@ -40,21 +40,16 @@
 \setsansfont[]{PT Sans Narrow Bold}
 
 \newcommand{\titlestyle}[1] {
-	{\fontsize{50pt}{1em}\selectfont \textcolor{new_red}{\textsf{#1}}} \\
+	{\fontsize{40pt}{1em}\selectfont \textcolor{new_red}{\textsf{#1}}} \\
 }
 
 \newcommand{\headingstyleJobs}[1] {
-	{\fontsize{19pt}{1em}\selectfont \textcolor{new_red}{\textsf{#1}}}
+	{\fontsize{18pt}{1em}\selectfont \textcolor{new_red}{\textsf{#1}}}
 	\textcolor{new_red}{\rule{3.25in}{0.5pt}} \vspace{3pt}
 }
 
-\newcommand{\headingstyleSJobs}[1] {
-	{\fontsize{20pt}{1em}\selectfont \textcolor{new_red}{\textsf{#1}}}
-	\textcolor{new_red}{\rule{3.25in}{0.5pt}} \vspace{-10pt}
-}
-
 \newcommand{\infostyle}[1] {
-	{\fontsize{13pt}{1em}\selectfont #1} \\ \vspace{10pt}
+	{\selectfont #1} \\ \vspace{10pt}
 }
 
 \newcommand{\redemph}[1] {
@@ -63,6 +58,10 @@
 
 \newcommand{\jobtitle}[3] {
 	{\bf #1} · {#2} · {#3} \vspace{-7pt} \\
+}
+
+\newcommand{\certification}[2] {
+	{\bf #1} · {#2} \vspace{5pt} \\
 }
 
 \let\olditemize\itemize
@@ -110,6 +109,8 @@
 
 \headingstyleJobs{Experience}
 
+\certification{Certified SolidWorks Associate (CSWA)}{2020-01-23}
+
 \jobtitle{NASA Jet Propulsion Laboratory}{Gravity-Offload System}{2018-06-11 – 2018-09-07}
 \begin{itemize}
 	\item Developed a system to study robotic mobility for missions to icy moons \\
@@ -142,6 +143,7 @@
 	\item Designed components to demonstrate the feasibility of the proposed system
 	\item Performed a test with a robot arm to demonstrate the proposed boring method
 	\item Created drawings for parts to manufacture and to get ROM quotes
+	\item Coauthored ``\href{https://ieeexplore-ieee-org.proxy.library.ucsb.edu:9443/stamp/stamp.jsp?tp=&arnumber=7943863}{A deep subsurface ice probe for Europa}'' in IEEE Aerospace Conference 2017
 \end{itemize}
 
 \jobtitle{Mechatronics Course Design Project (LTH)}{Camera Cleaning System}{2017-08-28 – 2018-05-15}
@@ -191,12 +193,12 @@
 %\end{itemize}
 
 
-\headingstyleJobs{Publications}
-
-\vspace{-9pt}
-\nocite{OWMS}
-\bibliography{bananas}
-\bibliographystyle{ieeetr}
+%\headingstyleJobs{Publications}
+%
+%\vspace{-9pt}
+%\nocite{OWMS}
+%\bibliography{bananas}
+%\bibliographystyle{ieeetr}
 
 
 \textit{A portfolio of my work can be found at} \url{http://portfolium.com/fporter/portfolio}
