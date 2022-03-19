@@ -19,7 +19,6 @@
 \usepackage{url}
 \usepackage{etoolbox}
 \usepackage{siunitx}
-%\usepackage{textcomp}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
 \pagenumbering{gobble}
@@ -49,7 +48,7 @@
 }
 
 \newcommand{\infostyle}[1] {
-	{\selectfont #1} \\ \vspace{10pt}
+	{\selectfont #1} \\ %\vspace{10pt}
 }
 
 \newcommand{\redemph}[1] {
@@ -62,6 +61,20 @@
 
 \newcommand{\certification}[2] {
 	{\bf #1} · {#2} \vspace{5pt} \\
+}
+
+\renewenvironment{quote}{%
+  \list{}{%
+    \leftmargin4pt
+    \rightmargin\leftmargin
+  }
+  \item\relax
+}
+{\endlist}
+\newcommand{\overview}[1] {
+	\begin{quote}
+		#1
+	\end{quote}
 }
 
 \let\olditemize\itemize
@@ -93,6 +106,13 @@
 \titlestyle{Fletcher Porter}
 \infostyle{+1 (626) 321-6687 · \href{mailto:me@fletcherporter.com}{me@fletcherporter.com} · \url{http://fletcherporter.com}}
 
+\overview{
+I'm a jack-of-all-trades engineer with particular skill in software
+development and mechanical design.  I love to get my hands dirty in every piece
+of a system.  I find joy in having a broad understanding of everything and
+intimate knowledge of a few things I get to own.  I've also found enourmous
+utility in meticulous documentation and reporting on my work.
+}
 
 \headingstyleJobs{Education}
 
@@ -111,7 +131,7 @@
 
 \headingstyleJobs{Experience}
 
-\jobtitle{Oblong Inc.}{Software Developer}{December 2020 – March 2022}
+\jobtitle{Oblong Inc.}{Software Developer}{Dec. 2020 – March 2022}
 \begin{itemize}
 	\item Qualified new hardware for a complex, embedded, multimedia, hardware/software device \\
 	\item Collaborated on a hybrid remote/in-person team in the midst of the COVID-19 pandemic \\
@@ -121,17 +141,17 @@
 	\item Developed polyglot software in Python, Go, Bash, C++, C, Ruby, JavaScript, and TypeScript \\
 \end{itemize}
 
-\jobtitle{Tetra Bio Distributed}{Engineer, Board Secretary}{April 2020 – January 2021}
+\jobtitle{Tetra Bio Distributed}{Engineer, Board Secretary}{April 2020 – Jan. 2021}
 \begin{itemize}
 	\item Developed \href{https://github.com/tetrabiodistributed/project-tetra-display}{a software display} to show respiration descriptors of COVID-19 patients to doctors \\
 	\item Designed a web server to send patient data to a browser front end using Python and Go \\
 	\item Developed a Continuous Integration system to automatically test the software as it's checked in \\
 	\item Wrote drivers for a pressure and a flow sensor for an embedded Linux system \\
 	\item Made signal processing tools to turn sensor data into patient state descriptors useful to doctors \\
-	\item Prepared IRS Form 1023-EZ to successfully get the organization 501(c)(3) non-profit status \\
+%	\item Prepared IRS Form 1023-EZ to successfully get the organization 501(c)(3) non-profit status \\
 \end{itemize}
 
-\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{June 2018 – Sept. 2018}
+\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{Summers 2018, 2016, and 2014}
 \begin{itemize}
 	\item Developed a system to study robotic mobility for missions to icy moons \\
 	\item Designed in CAD a mechanical system to offload gravity with minimal lateral forces \\
@@ -139,31 +159,34 @@
 	\item Designed an electrical system to distribute power to microprocessors that control the system \\
 %	\item Assembled the mechanical and electrical systems by hand \\
 	\item Wrote automatic control programs and documentation in Python and Arduino C \\
+	\item Developed a proposal for \href{https://portfolium.com/entry/owms-deep-subsurface-access-level-wind}{a probe to bore \textasciitilde$\SI{20}{\kilo\meter}$ into Europa's icy crust} \\
+	\item Designed and executed a test to demonstrate the feasibility of the proposed system \\
+%	\item Created drawings for parts to manufacture and to get ROM quotes \\
+	\item Co-authored ``\href{https://ieeexplore-ieee-org.proxy.library.ucsb.edu:9443/stamp/stamp.jsp?tp=&arnumber=7943863}{A deep subsurface ice probe for Europa}'' in IEEE Aerospace Conference 2017 \\
 \end{itemize}
 
 \jobtitle{Hawkes Group, UCSB}{Undergraduate Researcher}{March 2019 – Sept. 2019}
 \begin{itemize}
 	\item Iteratively designed in CAD a fixture to hold tools on the end of \href{https://portfolium.com/entry/vine-robot-tool-mount}{a soft, vine-like robot} \\
 	\item Built these fixtures by making them on a 3D printer and assembling them \\
-	\item Documented the design process and results \\
+	\item Developed models for jump height of a carbon fiber-bow jumping robot
+%	\item Documented the design process and results \\
 \end{itemize}
 
 \jobtitle{Capstone Course Design Project (UCSB)}{Student Engineer}{Sept. 2018 – June 2019}
 \begin{itemize}
-	\item Designed in CAD \href{https://portfolium.com/entry/automatic-stair-climbing-vehicle}{a dolly that climbs stairs} while carrying a heavy payload \\
-	\item Created manufacturing drawing of all custom components in the system \\
-	\item Machined most custom components by hand on a mill and lathe \\
-	\item Reported the design process and results \\
-%	\item Developed models for jump height of a carbon fiber-bow jumping robot
+	\item Designed in SolidWorks from requirements \href{https://portfolium.com/entry/automatic-stair-climbing-vehicle}{a stair-climbing dolly} that carries heavy payloads \\
+	\item Machined most custom components by hand on a mill and lathe from drawings I made \\
+%	\item Reported the design process and results \\
 \end{itemize}
 
-\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{June 2016 – Aug. 2016}
-\begin{itemize}
-	\item Developed a proposal for \href{https://portfolium.com/entry/owms-deep-subsurface-access-level-wind}{a probe to bore \textasciitilde$\SI{20}{\kilo\meter}$ into Europa's icy crust} \\
-	\item Designed and executed a test to demonstrate the feasibility of the proposed system \\
-	\item Created drawings for parts to manufacture and to get ROM quotes \\
-	\item Coauthored ``\href{https://ieeexplore-ieee-org.proxy.library.ucsb.edu:9443/stamp/stamp.jsp?tp=&arnumber=7943863}{A deep subsurface ice probe for Europa}'' in IEEE Aerospace Conference 2017 \\
-\end{itemize}
+%\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{June 2016 – Aug. 2016}
+%\begin{itemize}
+%	\item Developed a proposal for \href{https://portfolium.com/entry/owms-deep-subsurface-access-level-wind}{a probe to bore \textasciitilde$\SI{20}{\kilo\meter}$ into Europa's icy crust} \\
+%	\item Designed and executed a test to demonstrate the feasibility of the proposed system \\
+%	\item Created drawings for parts to manufacture and to get ROM quotes \\
+%	\item Coauthored ``\href{https://ieeexplore-ieee-org.proxy.library.ucsb.edu:9443/stamp/stamp.jsp?tp=&arnumber=7943863}{A deep subsurface ice probe for Europa}'' in IEEE Aerospace Conference 2017 \\
+%\end{itemize}
 
 %\jobtitle{Mechatronics Course Design Project (LTH)}{Student Engineer}{Aug. 2017 – May 2018}
 %\begin{itemize}
