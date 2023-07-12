@@ -1,0 +1,3 @@
+[submodule "fi_dict"]
+	path = fi_dict
+	url = git@github.com:fpdotmonkey/fi_dict.git
