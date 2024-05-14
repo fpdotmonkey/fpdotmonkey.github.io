@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NASA on Fletcher Porter</title>
+    <link>http://localhost:1313/tags/nasa/</link>
+    <description>Recent content in NASA on Fletcher Porter</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nasa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gravity Offload System</title>
+      <link>http://localhost:1313/blog/gravity-offload-system/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/gravity-offload-system/</guid>
+      <description>In 2018 I did an internship at NASA Jet Propulsion Laboratory where I worked on a gravity-offload system to test mobility for a future rover mission to Saturn&amp;#39;s moon Enceladus.&#xA;Prior to my arrival, there was already an offload system that consisted of a couple constant force springs hanging from a gantry on the ceiling of a shipping container. These springs connected to a robot that would drive on Enceladus-analogue dust.</description>
+    </item>
+  </channel>
+</rss>

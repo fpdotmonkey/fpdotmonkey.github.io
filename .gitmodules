@@ -1,3 +1,6 @@
 [submodule "fi_dict"]
 	path = harjoitus
 	url = git@github.com:fpdotmonkey/fi_dict.git
+[submodule "themes/fp"]
+	path = themes/fp
+	url = https://github.com/Vimux/blank.git

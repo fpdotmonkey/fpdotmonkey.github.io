@@ -1,0 +1,18 @@
+#+TITLE: Vine Robots
+#+DATE: 2020-03-16
+#+AUTHOR: Fletcher Porter
+#+TAGS[]: mechanical pneumatic soft-robot uc-santa-barbara
+
+In 2019, I worked with the [[https://www.hawkeslab.com/][Hawkes Lab]] at UC Santa Barbara on developing a tool mount for their soft vine-like robots. I ultimately made two prototypes.
+
+The first, seen below, is a set of three inflated plastic tubes bound together with magnets that can extend and retract. A tool attached to a plate on the end which mated to the pnuematic structure with a piece of sugical tubing that was gripped by pressure from the tubes.
+
+#+CAPTION: With three tubes, it could orient the tool by everting the tubes relative to eachother.
+[[file:/threeTube.jpg]]
+
+The other was a clamp where one half was inside the tube and the other half was on the outside of the tube, and the two were bonded together with magnetic rollers that allowed the robot to evert and invert while the tube rode on the end.
+
+#+CAPTION: A tool could be attached to the outer piece and could get data and power transmission to the inside of the tube through a contactless interfaces.
+[[file:/clamp.png]]
+
+You can read more about this project in [[https://portfolium.com/entry/vine-robot-tool-mount][my portfolio]].

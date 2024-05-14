@@ -1,0 +1,8 @@
+baseURL = 'http://fletcherporter.com/'
+languageCode = 'en-us'
+title = 'Fletcher Porter'
+theme = 'fp'
+
+[[params.contact]]
+email = 'me@fletcherporter.com'
+phone = '+358 41 476 3167'

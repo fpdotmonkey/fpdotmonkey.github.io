@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pneumatic on Fletcher Porter</title>
+    <link>http://localhost:1313/tags/pneumatic/</link>
+    <description>Recent content in Pneumatic on Fletcher Porter</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pneumatic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vine Robots</title>
+      <link>http://localhost:1313/blog/vine_robot/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/vine_robot/</guid>
+      <description>In 2019, I worked with the Hawkes Lab at UC Santa Barbara on developing a tool mount for their soft vine-like robots. I ultimately made two prototypes.&#xA;The first, seen below, is a set of three inflated plastic tubes bound together with magnets that can extend and retract. A tool attached to a plate on the end which mated to the pnuematic structure with a piece of sugical tubing that was gripped by pressure from the tubes.</description>
+    </item>
+  </channel>
+</rss>

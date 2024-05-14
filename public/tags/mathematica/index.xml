@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematica on Fletcher Porter</title>
+    <link>http://localhost:1313/tags/mathematica/</link>
+    <description>Recent content in Mathematica on Fletcher Porter</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Who should star in the next /Shovel Knight/ game?</title>
+      <link>http://localhost:1313/blog/shovel_knight_poll/</link>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/shovel_knight_poll/</guid>
+      <description>I did a poll in 2018 asking people what characters they&amp;#39;d like to see playable in a future installment of Shovel Knight. Rather than just counting the votes directly and finding a result, I created a method to find out what types of characters people would like and ultimately come up with a list of characters that the community wants that appeals to the most people while also giving the developers some freedom to pick what characters they want.</description>
+    </item>
+  </channel>
+</rss>
