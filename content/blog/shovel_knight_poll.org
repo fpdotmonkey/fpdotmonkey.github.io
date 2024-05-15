@@ -1,9 +1,0 @@
-#+TITLE: Who should star in the next Shovel Knight game?
-#+DATE: 2019-08-17
-#+AUTHOR: Fletcher Porter
-#+TAGS[]: programming mathematica fun
-
-I did a poll in 2018 asking people what characters they'd like to see playable in a future installment of Shovel Knight. Rather than just counting the votes directly and finding a result, I created a method to find out what types of characters people would like and ultimately come up with a list of characters that the community wants that appeals to the most people while also giving the developers some freedom to pick what characters they want. You can read about it [[/SK_poll_analysis.pdf][here]].
-
-#+CAPTION: A plot of which characters were frequently voted together.  Darker colors indicate greater frequency.
-[[file:/characterPairs.png]]

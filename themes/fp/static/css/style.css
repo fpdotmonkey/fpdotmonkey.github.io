@@ -65,8 +65,12 @@ hr {
     padding: 0; 
 }
 
-img {
+img, iframe, video {
     width: 560px;
+}
+
+figcaption {
+    font-size: 12pt;
 }
 
 time {
@@ -75,4 +79,8 @@ time {
 
 .tag {
     font-style: italic;
+}
+
+.figure-number {
+    font-weight: bold;
 }

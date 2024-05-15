@@ -5,3 +5,6 @@
 *.log
 *.out
 *.gz
+
+/public
+/static/ox-hugo
