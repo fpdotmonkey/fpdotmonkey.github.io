@@ -6,5 +6,5 @@
 *.out
 *.gz
 
-/public
-/static/ox-hugo
+/public/
+/static/ox-hugo/

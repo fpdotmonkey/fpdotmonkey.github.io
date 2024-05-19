@@ -1,10 +1,27 @@
-#+TITLE: Blog
+#+TITLE: fletcherporter.com
 #+AUTHOR: Fletcher Porter
 
 #+HUGO_BASE_DIR: ../
-#+HUGO_SECTION: blog
 
-* DONE Gravity Offload System :mechanical:electrical:control:nasa:jpl:robosimian:
+#+CITE_EXPORT: csl fp.csl
+
+* Homepage
+:PROPERTIES:
+:EXPORT_TITLE: Fletcher Porter
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_SECTION: /
+:END:
+
+[[mailto:me@fletcherporter.com][me@fletcherporter.com]] · +358 41 476 3167
+
+Here is a link to my resume: [[../tex/Fletcher_Porter.pdf][Current October 2023]]
+
+* Blog
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: blog
+:END:
+
+** DONE Gravity Offload System :mechanical:electrical:control:nasa:jpl:robosimian:
 CLOSED: [2020-03-16]
 :PROPERTIES:
 :EXPORT_FILE_NAME: gravity-offload-system
@@ -27,7 +44,7 @@ Ultimately, the system was very successful. Almost all non-vertical forces were 
 #+CAPTION: On the right is the camera that detects RoboSimians position which is fed back into the controller.  Also visible are supporting electronic and the mechanical system in the back.
 [[file:assets/GOS_bottomIso.jpg]]
 
-* DONE Vine Robots         :mechanical:pneumatic:softrobot:ucsb:
+** DONE Vine Robots                     :mechanical:pneumatic:softrobot:ucsb:
 CLOSED: [2020-03-16]
 :PROPERTIES:
 :EXPORT_FILE_NAME: vine-robots
@@ -45,7 +62,7 @@ The other was a clamp where one half was inside the tube and the other half was 
 #+CAPTION: A tool could be attached to the outer piece and could get data and power transmission to the inside of the tube through a contactless interfaces.
 [[file:assets/clamp.png]]
 
-* DONE Presenting at the 2019 FIRST Tech Challenge Kickoff Workshop :design:presentation:
+** DONE Presenting at the 2019 FIRST Tech Challenge Kickoff Workshop :design:presentation:
 CLOSED: [2019-09-13]
 :PROPERTIES:
 :EXPORT_FILE_NAME: ftc-kickoff-2019
@@ -58,7 +75,7 @@ I was asked by the Los Angeles FIRST Tech Challenge organization to give a works
 
 [[file:assets/making_innovative_designs.pdf][These]] are the slides for the presentation I gave.  The topic was how to design innovative systems, especially for the robots that the students will be building for their competition.  I went over how to create a design specification given a design problem (an essential step for designing any system, innovative or not), defining what and innovation even is, identifying when it's useful or not to innovate, and throughout I showed off useful tools to try to understand design.
 
-* DONE A dolly with assisted stair climbing      :mechanical:electrical:ucsb:
+** DONE A dolly with assisted stair climbing     :mechanical:electrical:ucsb:
 CLOSED: [2024-08-06]
 :PROPERTIES:
 :EXPORT_FILE_NAME: stair-climbing-dolly
@@ -83,7 +100,7 @@ The most fun part of this project was that I got to machine most of the parts my
 #+CAPTION: One of the drawings for a part that I made.  You can see it in figure [[fig:dolly_drivetrain]] holding each of the wheels on.
 [[file:assets/replacement_dolly_axel.png]]
 
-* DONE Computational Olympic rings              :programming:mathematica:fun:
+** DONE Computational Olympic rings             :programming:mathematica:fun:
 CLOSED: [2019-08-06]
 :PROPERTIES:
 :EXPORT_FILE_NAME: computational-olympic-rings
@@ -94,7 +111,7 @@ I've heard that the Olympic Rings logo's colors are based on the colors of the w
 #+CAPTION: The Olympic Rings according a color palette found by studying all the world's flags
 [[file:assets/olympic_rings.png]]
 
-* DONE Who should star in the next Shovel Knight game? :programming:mathematica:fun:
+** DONE Who should star in the next Shovel Knight game? :programming:mathematica:fun:
 CLOSED: [2019-08-17]
 :PROPERTIES:
 :EXPORT_FILE_NAME: shovel-knight-poll
@@ -106,7 +123,7 @@ I did a poll in 2018 asking people what characters they'd like to see playable i
 #+NAME: foo
 [[file:assets/characterPairs.png]]
 
-* DONE An Automatic Security Camera Lens Cleaner :mechanical:electrical:pneumatic:lunduniversity:
+** DONE An Automatic Security Camera Lens Cleaner :mechanical:electrical:pneumatic:lunduniversity:
 CLOSED: [2018-10-30]
 :PROPERTIES:
 :EXPORT_FILE_NAME: security-camera-window
@@ -121,7 +138,7 @@ I did the mechanical design of the system, sizing and selecting the compressor, 
 
 [[yt:nzDOJuoSqGU]]
 
-* DONE Boring 20km into Europa's surface            :mechanical:ice:nasa:jpl:
+** DONE Boring 20km into Europa's surface           :mechanical:ice:nasa:jpl:
 CLOSED: [2016-08-26 Wed 16:29]
 :PROPERTIES:
 :EXPORT_FILE_NAME: owms
@@ -139,7 +156,7 @@ This video shows a test I designed for verifying that the circular saw concept f
 
 [[yt:dgGWmtRm8hI][OWMS Saw Test]]
 
-* DONE OPALS Wikipedia Article                       :writing:ucsb:wikipedia:
+** DONE OPALS Wikipedia Article                      :writing:ucsb:wikipedia:
 CLOSED: [2015-11-28 Sat 16:28]
 :PROPERTIES:
 :EXPORT_FILE_NAME: opals-wikipedia
@@ -152,7 +169,7 @@ You can view it [[https://en.wikipedia.org/wiki/OPALS][here]].
 #+CAPTION: OPALS under construction (/Image credit JPL/Caltech via Wikimedia Commons/)
 [[file:assets/opals_under_construction.jpg]]
 
-* DONE A hand for a disaster recovery robot  :mechanical:robosimian:nasa:jpl:
+** DONE A hand for a disaster recovery robot :mechanical:robosimian:nasa:jpl:
 CLOSED: [2024-10-21]
 :PROPERTIES:
 :EXPORT_FILE_NAME: hand-disaster-recovery-robot
@@ -170,3 +187,16 @@ Here is a video of Principal Investigator Brett Kennedy speaking about the finge
 Here is a video of RoboSimian at the 2015 DARPA Robotics Challenge Finals, demonstrating dextrous manipulation.
 
 [[yt:NSFm7sxDDiU][Team Robosimian Time Lapse - Day 1]]
+
+* Publications
+:PROPERTIES:
+:EXPORT_TITLE: Publications
+:EXPORT_HUGO_SECTION: publications
+:EXPORT_FILE_NAME: _index
+:BIBLIOGRAPHY_SECTION_HEADING: Foo
+:END:
+
+#+BIBLIOGRAPHY: publications.bib
+[cite/n:@*]
+
+#+PRINT_BIBLIOGRAPHY:
