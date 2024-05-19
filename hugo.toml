@@ -2,6 +2,7 @@ baseURL = 'http://fletcherporter.com/'
 languageCode = 'en-us'
 title = 'Fletcher Porter'
 theme = 'fp'
+sectionPagesMenu = 'main'
 
 [markup.goldmark.renderer]
 unsafe = true

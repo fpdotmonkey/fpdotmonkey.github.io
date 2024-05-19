@@ -193,8 +193,13 @@ Here is a video of RoboSimian at the 2015 DARPA Robotics Challenge Finals, demon
 :EXPORT_TITLE: Publications
 :EXPORT_HUGO_SECTION: publications
 :EXPORT_FILE_NAME: _index
-:BIBLIOGRAPHY_SECTION_HEADING: Foo
+:BIBLIOGRAPHY_SECTION_HEADING: FOO
 :END:
+
+Fletcher Porter and Jari Vepsäläinen. "A Model for Selecting Software Tools for Fluid Power Systems (in Review)," /The 12th JFPS International Symposium on Fluid Power/, 2024.
+
+Brian H. Wilcox, Jason A. Carlton, Justin M. Jenkins, and Fletcher A. Porter. "A Deep Subsurface Ice Probe for Europa," /IEEE Aerospace Conference/, pp. 1–13, doi: doi:10.1109/AERO.2017.7943863, 2017.
+
 
 #+BIBLIOGRAPHY: publications.bib
 [cite/n:@*]

@@ -38,7 +38,7 @@ h1, h2, h3 {
     font-size: 72pt;
     font-weight: bold;
     line-height: 1.2;
-    margin: 0;
+    margin: 0 0 0 -10px;
     color: #5E0703;
 }
 
@@ -65,7 +65,7 @@ hr {
     padding: 0; 
 }
 
-img, iframe, video {
+img, video {
     width: 560px;
 }
 
@@ -77,10 +77,23 @@ time {
     font-style: italic;
 }
 
+ul {
+    list-style: "–"; /* en dash */
+    margin: 5px 0 0 0;
+}
+
+li {
+    padding-left: 1em;
+}
+
 .tag {
     font-style: italic;
 }
 
 .figure-number {
     font-weight: bold;
+}
+
+h3.latest-posts {
+    margin: 15px 0 0 0;
 }
