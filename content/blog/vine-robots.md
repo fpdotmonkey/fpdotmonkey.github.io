@@ -4,6 +4,7 @@ author = ["Fletcher Porter"]
 date = 2020-03-16T00:00:00+02:00
 tags = ["mechanical", "pneumatic", "softrobot", "ucsb"]
 draft = false
+thumbnail = "/ox-hugo/clamp.png"
 +++
 
 In 2019, I worked with the [Hawkes Lab](https://www.hawkeslab.com/) at UC Santa Barbara on developing a tool mount for their soft vine-like robots. I ultimately made two prototypes.

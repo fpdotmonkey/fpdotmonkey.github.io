@@ -4,6 +4,7 @@ author = ["Fletcher Porter"]
 date = 2019-09-13T00:00:00+03:00
 tags = ["design", "presentation"]
 draft = false
+thumbnail = "/ox-hugo/workshop_in_progress.png"
 +++
 
 I was asked by the Los Angeles FIRST Tech Challenge organization to give a workshop on engineering design to high school students at the annual kickoff for the new season of competitive high school robotics. I gave two sessions of a 45 minute presentation on how to create innovative components for their robots to an audience of a few dozen students in each session.

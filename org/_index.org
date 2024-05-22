@@ -25,6 +25,7 @@ Here is a link to my resume: [[../tex/Fletcher_Porter.pdf][Current October 2023]
 CLOSED: [2020-03-16]
 :PROPERTIES:
 :EXPORT_FILE_NAME: gravity-offload-system
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/ContainerTopLevel.png
 :END:
 
 In 2018 I did an internship at NASA Jet Propulsion Laboratory where I worked on a gravity-offload system to test mobility for a future rover mission to Saturn's moon Enceladus.
@@ -48,6 +49,7 @@ Ultimately, the system was very successful. Almost all non-vertical forces were 
 CLOSED: [2020-03-16]
 :PROPERTIES:
 :EXPORT_FILE_NAME: vine-robots
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/clamp.png
 :END:
 
 In 2019, I worked with the [[https://www.hawkeslab.com/][Hawkes Lab]] at UC Santa Barbara on developing a tool mount for their soft vine-like robots. I ultimately made two prototypes.
@@ -66,6 +68,7 @@ The other was a clamp where one half was inside the tube and the other half was 
 CLOSED: [2019-09-13]
 :PROPERTIES:
 :EXPORT_FILE_NAME: ftc-kickoff-2019
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/workshop_in_progress.png
 :END:
 
 I was asked by the Los Angeles FIRST Tech Challenge organization to give a workshop on engineering design to high school students at the annual kickoff for the new season of competitive high school robotics. I gave two sessions of a 45 minute presentation on how to create innovative components for their robots to an audience of a few dozen students in each session.
@@ -79,6 +82,7 @@ I was asked by the Los Angeles FIRST Tech Challenge organization to give a works
 CLOSED: [2024-08-06]
 :PROPERTIES:
 :EXPORT_FILE_NAME: stair-climbing-dolly
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/dolly.jpg
 :END:
 
 My bachelor thesis was to design and build a dolly that could carry a heavy, sensitive payload up and down stair with minimal force necessary from the user.  The solution I and my group came up with was to build a motorized dolly.
@@ -104,6 +108,7 @@ The most fun part of this project was that I got to machine most of the parts my
 CLOSED: [2019-08-06]
 :PROPERTIES:
 :EXPORT_FILE_NAME: computational-olympic-rings
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/olympic_rings.png
 :END:
 
 I've heard that the Olympic Rings logo's colors are based on the colors of the world's flags. With this project, I sought to find out if you would get a similar logo if you captured the colors of the world's flags and made the Olympic Rings logo with them.  I wrote [[file:assets/olympic_rings.pdf][this article]] to determine if that's true.  Turns out, it is!
@@ -115,6 +120,7 @@ I've heard that the Olympic Rings logo's colors are based on the colors of the w
 CLOSED: [2019-08-17]
 :PROPERTIES:
 :EXPORT_FILE_NAME: shovel-knight-poll
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/characterPairs.png
 :END:
 
 I did a poll in 2018 asking people what characters they'd like to see playable in a future installment of Shovel Knight. Rather than just counting the votes directly and finding a result, I created a method to find out what types of characters people would like and ultimately come up with a list of characters that the community wants that appeals to the most people while also giving the developers some freedom to pick what characters they want. You can read about it [[file:assets/SK_poll_analysis.pdf][here]].
@@ -127,6 +133,7 @@ I did a poll in 2018 asking people what characters they'd like to see playable i
 CLOSED: [2018-10-30]
 :PROPERTIES:
 :EXPORT_FILE_NAME: security-camera-window
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/security_camera_lens_cleaner.jpg
 :END:
 
 During an exchange at Lund University in Sweden, I had a course project to develop a system for Axis Communications AB to clean the windows on their security cameras when rainwater or dirt gets on them. The system did this by compressing air onboard and spraying that air onto the camera window.
@@ -142,11 +149,12 @@ I did the mechanical design of the system, sizing and selecting the compressor, 
 CLOSED: [2016-08-26 Wed 16:29]
 :PROPERTIES:
 :EXPORT_FILE_NAME: owms
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/owms_level_wind.png
 :END:
 During an internship at NASA Jet Propulsion Laboratory in 2016, I designed a system to test a concept for a probe to explore inside of Jupiter's moon Europa. It uses a circular saw rotating about the vertical axis to create a borehole in ice, which on Europa would be ~20 km deep. I was an author of a paper on this system published in IEEE aerospace, available [[https://ieeexplore.ieee.org/document/7943863][here]].
 
 #+CAPTION: This component is a level wind for the system.  It held a tether (green, 20 km worth) and spooled it out one layer at a time, each layer alternating spiraling inward and outward.  The mechanical components rotated about the threaded central pillar and the tether would go up along the red pulley as it traveled along the length of the cyan shaft.
-[[file:owms_level_wind.PNG]]
+[[file:assets/owms_level_wind.png]]
 
 This video shows the probe as it would be applied on Europa.
 
@@ -160,6 +168,7 @@ This video shows a test I designed for verifying that the circular saw concept f
 CLOSED: [2015-11-28 Sat 16:28]
 :PROPERTIES:
 :EXPORT_FILE_NAME: opals-wikipedia
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/opals_under_construction.jpg
 :END:
 
 During fall quarter of my freshman year at UCSB, I wrote a Wikipedia article for a writing class on the [[https://www.jpl.nasa.gov/missions/optical-payload-for-lasercomm-science-opals][Optical PAyload for Lasercomm Science (OPALS)]] mission out of JPL/Caltech.
@@ -173,6 +182,7 @@ You can view it [[https://en.wikipedia.org/wiki/OPALS][here]].
 CLOSED: [2024-10-21]
 :PROPERTIES:
 :EXPORT_FILE_NAME: hand-disaster-recovery-robot
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/cam_hand_render.JPG
 :END:
 
 In summer 2014, I worked at NASA Jet Propulsion Laboratory in their Robotic Vehicles and Manipulators lab. I worked on the design for a so-called Cam Hand for the disaster recovery robot, [[https://www.jpl.nasa.gov/robotics-at-jpl/robosimian][RoboSimian]].
@@ -189,19 +199,112 @@ Here is a video of RoboSimian at the 2015 DARPA Robotics Challenge Finals, demon
 [[yt:NSFm7sxDDiU][Team Robosimian Time Lapse - Day 1]]
 
 * Publications
-:PROPERTIES:
-:EXPORT_TITLE: Publications
-:EXPORT_HUGO_SECTION: publications
-:EXPORT_FILE_NAME: _index
-:BIBLIOGRAPHY_SECTION_HEADING: FOO
-:END:
+# For now, this has to be done manually without org-mode...
 
-Fletcher Porter and Jari Vepsäläinen. "A Model for Selecting Software Tools for Fluid Power Systems (in Review)," /The 12th JFPS International Symposium on Fluid Power/, 2024.
+#+BEGIN_SRC sh :exports results :results html
+if [ ! -d venv ]; then python3 -m venv; fi
+. venv/bin/activate
+pip install --requirement requirements.txt > /dev/null
+python publications.py
+#+END_SRC
 
-Brian H. Wilcox, Jason A. Carlton, Justin M. Jenkins, and Fletcher A. Porter. "A Deep Subsurface Ice Probe for Europa," /IEEE Aerospace Conference/, pp. 1–13, doi: doi:10.1109/AERO.2017.7943863, 2017.
+#+RESULTS:
+#+begin_export html
+<div>
+    <style>
+ :target {
+     background: AntiqueWhite;
+ }
+
+ label {
+     cursor: pointer;
+     color: #5E0703;
+     text-decoration: underline;
+ }
+
+ .bib-artifact-container {
+     margin: -10px 0 10px 0;
+ }
+
+ .bib-artifact {
+     font-family: monospace;
+     font-size: 12pt;
+     user-select: none;
+ }
+
+ textarea {
+     -webkit-user-select: all;
+     user-select: all;
+     width: 300px;
+ }
+
+ input[type=checkbox] {
+     display: none;
+ }
+
+ .bib-check:checked ~ .bib-src {
+     display: none;
+ }
+
+ .abstract-check:checked ~ .abstract-src {
+     display: none;
+ }
+    </style>
+    
+<div id="Porter2024">
+    Fletcher Porter and Jari Vepsäläinen.  "A Model for Selecting Software Tools for Fluid Power Systems (In Review)", <i>The 12th JFPS International Symposium on Fluid Power</i>, 2024.
+    <div class="bib-artifact-container">
+	<input type="checkbox" class="abstract-check" id="Porter2024abs" checked="">
+<label class="bib-artifact" for="Porter2024abs">[abstract]</label>
+	
+	
+	<input type="checkbox" class="bib-check" id="Porter2024bib" checked="">
+	<label class="bib-artifact" for="Porter2024bib"> [bib]</label>
+	<div class="bib-src">
+	    <textarea readonly="true">@InProceedings{Porter2024,
+  author    = {Fletcher Porter and Jari Vepsäläinen},
+  booktitle = {The 12th {JFPS} International Symposium on Fluid Power},
+  title     = {A Model for Selecting Software Tools for Fluid Power Systems (In Review)},
+  year      = {2024},
+  abstract  = {Fluid power systems can be enormously complex. The chiefest complexity is in their control components due to the deep knowledge required for effective development, the need to interface with myriad heterogeneous components, and the opacity of its operation. In the IT sector, a tech stack is a known discretization of function within a system, typically used to categorize what software tools do. This enables disparate parts of a system to be developed separately. Inspired by IT tech stacks, this paper presents a model, the mechatronic tech stack, to mitigate this complexity by siloing control system behavior into discrete functions and classifying what tools can be used to meet them. The model is demonstrated on three case studies of diverse application. The theory is promising, but there are challenges in defining the most useful abstractions and interfaces.},
+}</textarea>
+        </div>
+	<blockquote class="abstract-src"><p>Fluid power systems can be enormously complex. The chiefest complexity is in their control components due to the deep knowledge required for effective development, the need to interface with myriad heterogeneous components, and the opacity of its operation. In the IT sector, a tech stack is a known discretization of function within a system, typically used to categorize what software tools do. This enables disparate parts of a system to be developed separately. Inspired by IT tech stacks, this paper presents a model, the mechatronic tech stack, to mitigate this complexity by siloing control system behavior into discrete functions and classifying what tools can be used to meet them. The model is demonstrated on three case studies of diverse application. The theory is promising, but there are challenges in defining the most useful abstractions and interfaces.</p></blockquote>
+    </div>
+</div>
 
 
-#+BIBLIOGRAPHY: publications.bib
-[cite/n:@*]
+<div id="Wilcox2017">
+    Brian H. Wilcox, Jason A. Carlton, Justin M. Jenkins, and Fletcher A. Porter.  "A deep subsurface ice probe for Europa", <i>IEEE Aerospace Conference</i>, 2017.
+    <div class="bib-artifact-container">
+	<input type="checkbox" class="abstract-check" id="Wilcox2017abs" checked="">
+<label class="bib-artifact" for="Wilcox2017abs">[abstract]</label>
+	
+	<a class="bib-artifact" href="https://doi.org/10.1109/AERO.2017.7943863">[doi]</a>
+	<input type="checkbox" class="bib-check" id="Wilcox2017bib" checked="">
+	<label class="bib-artifact" for="Wilcox2017bib"> [bib]</label>
+	<div class="bib-src">
+	    <textarea readonly="true">@INPROCEEDINGS{Wilcox2017,
+  author={Wilcox, Brian H. and Carlton, Jason A. and Jenkins, Justin M. and Porter, Fletcher A.},
+  booktitle={{IEEE} Aerospace Conference}, 
+  title={A deep subsurface ice probe for Europa}, 
+  year={2017},
+  volume={},
+  number={},
+  pages={1-13},
+  keywords={Probes;Ice;Electron tubes;Oceans;Heating systems;Blades;Wires},
+  doi={10.1109/AERO.2017.7943863},
+  abstract={This paper describes work on a concept for a probe that would be capable of km-scale deep subsurface ice penetration on Europa or other Ocean World. Penetrating deep into or through the ice cap over the liquid ocean is the best way to establish if life has evolved there. A central thesis of this work is that we must start by addressing the Planetary Protection constraints, and not to try to add them on at the end. Specifically, all hardware in the probe would be designed to survive heat sterilization at 500C for extended periods, as required to meet the COSPAR 1-in-10,000 probability per mission of biological contamination of the ocean. The baseline concept features a heat source containing plutonium-238 encased within a stainless Dewar so that the heat is not lost by conduction into the ice. A circular saw blade sticks out through a slot in a hemispherical turret dome at the bottom of the Dewar such that the blade cuts the ice as it spins. The turret also rotates slowly to cause the saw blade to make a hemispherical cut in the ice. The ice chips would be thrown up through the slit into the turret and would be melted by the heat source. The meltwater drains into sumps on either side of the sawblade, from which the meltwater would be pumped out to the rear of the probe.
+The main body of the probe contains a spool of aluminum tubing that would be dispensed from within the probe all the way back to the lander. This tubing is nominally 1-3 mm in outside dimension with integral insulated electrical wires around the center hole. This tube would pneumatically transport small (mm-scale) single-use canisters containing meltwater samples from the probe to the surface for analysis. Surface analysis allows use of instruments that can be neither miniaturized nor sterilized sufficiently to go down-hole. Dry inert gas would be used to push the canister down from the lander and back up. The dry gas would be re-compressed and re-used. During a portion of the cruise to the outer solar system, the heat source would heat the entire probe, including the coiled tubing inside as well as all the canisters and inert gas, to 500C to destroy any lingering organisms and to decompose any complex organic molecules.
+The paper describes analysis, design, and preliminary testing, as well as plans for building a prototype and testing it in an &quot;ice treadmill&quot; where a plug of ice is created inside a vertical LN2 cold jacket, pushed up by water pumped below so that the ice plug rises at the same rate that the probe penetrates the ice.}
+}</textarea>
+        </div>
+	<blockquote class="abstract-src"><p>This paper describes work on a concept for a probe that would be capable of km-scale deep subsurface ice penetration on Europa or other Ocean World. Penetrating deep into or through the ice cap over the liquid ocean is the best way to establish if life has evolved there. A central thesis of this work is that we must start by addressing the Planetary Protection constraints, and not to try to add them on at the end. Specifically, all hardware in the probe would be designed to survive heat sterilization at 500C for extended periods, as required to meet the COSPAR 1-in-10,000 probability per mission of biological contamination of the ocean. The baseline concept features a heat source containing plutonium-238 encased within a stainless Dewar so that the heat is not lost by conduction into the ice. A circular saw blade sticks out through a slot in a hemispherical turret dome at the bottom of the Dewar such that the blade cuts the ice as it spins. The turret also rotates slowly to cause the saw blade to make a hemispherical cut in the ice. The ice chips would be thrown up through the slit into the turret and would be melted by the heat source. The meltwater drains into sumps on either side of the sawblade, from which the meltwater would be pumped out to the rear of the probe.</p><p>The main body of the probe contains a spool of aluminum tubing that would be dispensed from within the probe all the way back to the lander. This tubing is nominally 1-3 mm in outside dimension with integral insulated electrical wires around the center hole. This tube would pneumatically transport small (mm-scale) single-use canisters containing meltwater samples from the probe to the surface for analysis. Surface analysis allows use of instruments that can be neither miniaturized nor sterilized sufficiently to go down-hole. Dry inert gas would be used to push the canister down from the lander and back up. The dry gas would be re-compressed and re-used. During a portion of the cruise to the outer solar system, the heat source would heat the entire probe, including the coiled tubing inside as well as all the canisters and inert gas, to 500C to destroy any lingering organisms and to decompose any complex organic molecules.</p><p>The paper describes analysis, design, and preliminary testing, as well as plans for building a prototype and testing it in an &quot;ice treadmill&quot; where a plug of ice is created inside a vertical LN2 cold jacket, pushed up by water pumped below so that the ice plug rises at the same rate that the probe penetrates the ice.</p></blockquote>
+    </div>
+</div>
 
-#+PRINT_BIBLIOGRAPHY:
+</div>
+
+
+#+end_export
+

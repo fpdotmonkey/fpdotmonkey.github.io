@@ -97,3 +97,7 @@ li {
 h3.latest-posts {
     margin: 15px 0 0 0;
 }
+
+.thumbnail {
+    width: 300px;
+}

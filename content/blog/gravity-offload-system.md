@@ -4,6 +4,7 @@ author = ["Fletcher Porter"]
 date = 2020-03-16T00:00:00+02:00
 tags = ["mechanical", "electrical", "control", "nasa", "jpl", "robosimian"]
 draft = false
+thumbnail = "/ox-hugo/ContainerTopLevel.png"
 +++
 
 In 2018 I did an internship at NASA Jet Propulsion Laboratory where I worked on a gravity-offload system to test mobility for a future rover mission to Saturn's moon Enceladus.

@@ -4,6 +4,7 @@ author = ["Fletcher Porter"]
 date = 2024-08-06T00:00:00+03:00
 tags = ["mechanical", "electrical", "ucsb"]
 draft = false
+thumbnail = "/ox-hugo/dolly.jpg"
 +++
 
 My bachelor thesis was to design and build a dolly that could carry a heavy, sensitive payload up and down stair with minimal force necessary from the user.  The solution I and my group came up with was to build a motorized dolly.

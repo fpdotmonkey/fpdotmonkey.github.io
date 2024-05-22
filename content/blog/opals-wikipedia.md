@@ -4,6 +4,7 @@ author = ["Fletcher Porter"]
 date = 2015-11-28T16:28:00+02:00
 tags = ["writing", "ucsb", "wikipedia"]
 draft = false
+thumbnail = "/ox-hugo/opals_under_construction.jpg"
 +++
 
 During fall quarter of my freshman year at UCSB, I wrote a Wikipedia article for a writing class on the [Optical PAyload for Lasercomm Science (OPALS)](https://www.jpl.nasa.gov/missions/optical-payload-for-lasercomm-science-opals) mission out of JPL/Caltech.

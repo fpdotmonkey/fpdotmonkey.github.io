@@ -4,6 +4,7 @@ author = ["Fletcher Porter"]
 date = 2024-10-21T00:00:00+03:00
 tags = ["mechanical", "robosimian", "nasa", "jpl"]
 draft = false
+thumbnail = "/ox-hugo/cam_hand_render.JPG"
 +++
 
 In summer 2014, I worked at NASA Jet Propulsion Laboratory in their Robotic Vehicles and Manipulators lab. I worked on the design for a so-called Cam Hand for the disaster recovery robot, [RoboSimian](https://www.jpl.nasa.gov/robotics-at-jpl/robosimian).

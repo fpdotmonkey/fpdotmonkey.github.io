@@ -4,6 +4,7 @@ author = ["Fletcher Porter"]
 date = 2018-10-30T00:00:00+02:00
 tags = ["mechanical", "electrical", "pneumatic", "lunduniversity"]
 draft = false
+thumbnail = "/ox-hugo/security_camera_lens_cleaner.jpg"
 +++
 
 During an exchange at Lund University in Sweden, I had a course project to develop a system for Axis Communications AB to clean the windows on their security cameras when rainwater or dirt gets on them. The system did this by compressing air onboard and spraying that air onto the camera window.

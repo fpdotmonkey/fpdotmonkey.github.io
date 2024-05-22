@@ -12,8 +12,8 @@ draft = false
 +++
 <div>
     <style>
- body {{
-     max-width: 40em;
+ :target {{
+     background: AntiqueWhite;
  }}
 
  label {{
@@ -56,7 +56,7 @@ draft = false
 """
 
 ENTRY_TEMPLATE = """
-<div>
+<div id="{key}">
     {reference}
     <div class="bib-artifact-container">
 	{abstract_control}
@@ -81,19 +81,16 @@ ABSTRACT_TEMPLATE = '<blockquote class="abstract-src">{abstract}</blockquote>'
 def main():
     library = bibtexparser.parse_file("publications.bib")
     publications = [Publication(entry) for entry in library.entries]
-    publications_file = "../content/publications/_index.html"
-    os.makedirs(os.path.dirname(publications_file), exist_ok=True)
-    with open(publications_file, "w") as out:
-        out.write(
-            PAGE_TEMPLATE.format(
-                entries="\n".join(
-                    (
-                        publication.format()
-                        for publication in sorted(publications)
-                    )
+    print(
+        PAGE_TEMPLATE.format(
+            entries="\n".join(
+                (
+                    publication.format()
+                    for publication in sorted(publications)
                 )
             )
         )
+    )
 
 
 class Publication:
@@ -107,7 +104,6 @@ class Publication:
     def __init__(self, entry) -> None:
         self._key = entry.key
         self._reference_data = entry.fields_dict
-        print(self._reference_data.keys())
         self._abstract = self._reference_data.get("abstract")
         if self._abstract is not None:
             self._abstract = (
