@@ -2,7 +2,11 @@
 <main>
   <article>
     <h1>{{ .Title }}</h1>
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "02 January 2006" }}</time>
+    {{ if not .Date.IsZero }}  
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "2 January 2006" }}</time>
+    {{ else if .Draft }}
+    <div>NO TIME SET</div>
+    {{ end }}
     <div>
       {{ .Content }}
     </div>
@@ -12,7 +16,7 @@
         <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ .Name }}</a>
 	{{- end }}
     </div>
-    {{ with .Site.DisqusShortname }}
+    {{ with .Site.Config.Services.Disqus.Shortname }}
     <div>
       {{ template "_internal/disqus.html" . }}
     </div>

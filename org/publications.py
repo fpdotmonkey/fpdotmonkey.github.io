@@ -1,5 +1,6 @@
 import html
 import os
+import sys
 from typing import Dict, List, Optional
 
 import bibtexparser
@@ -60,11 +61,12 @@ ENTRY_TEMPLATE = """
     {reference}
     <div class="bib-artifact-container">
 	{abstract_control}
+        <label class="bib-artifact" for="{key}bib"> [bib]</label>
+        <a class="bib-artifact" href="#{key}"> [this]</a>
 	{pdf}
 	{doi}
 	<input type="checkbox" class="bib-check" id="{key}bib" checked="">
-	<label class="bib-artifact" for="{key}bib"> [bib]</label>
-	<div class="bib-src">
+        <div class="bib-src">
 	    <textarea readonly="true">{bib}</textarea>
         </div>
 	{abstract}
@@ -84,10 +86,7 @@ def main():
     print(
         PAGE_TEMPLATE.format(
             entries="\n".join(
-                (
-                    publication.format()
-                    for publication in sorted(publications)
-                )
+                (publication.format() for publication in sorted(publications))
             )
         )
     )
@@ -96,6 +95,7 @@ def main():
 class Publication:
     _bib: str
     _key: str
+    _entry_type: str
     _reference_data: dict
     _doi: Optional[str]
     _abstract: Optional[str]
@@ -103,22 +103,30 @@ class Publication:
 
     def __init__(self, entry) -> None:
         self._key = entry.key
+        self._entry_type = entry.entry_type
         self._reference_data = entry.fields_dict
-        self._abstract = self._reference_data.get("abstract")
-        if self._abstract is not None:
+        abstract = self._reference_data.get("abstract")
+        if abstract is not None:
             self._abstract = (
                 "<p>"
-                + str(
-                    html.escape(self._abstract.value).replace("\n", "</p><p>")
-                )
+                + str(html.escape(abstract.value).replace("\n", "</p><p>"))
                 + "</p>"
             )
-        self._pdf = self._reference_data.get("file")
-        if self._pdf is not None:
-            self._pdf = str(self._pdf.value)
-        self._doi = self._reference_data.get("doi")
-        if self._doi is not None:
-            self._doi = str(self._doi.value)
+        else:
+            raise Exception("abstract missing for {}".format(self._key))
+        pdf = self._reference_data.get("file")
+        if pdf is not None:
+            self._pdf = str(pdf.value)
+            self._pdf = self._pdf.replace(":PDF", "").replace(
+                ":assets/", "/ox-hugo/"
+            )
+        else:
+            self._pdf = None
+        doi = self._reference_data.get("doi")
+        if doi is not None:
+            self._doi = str(doi.value)
+        else:
+            self._doi = None
         self._bib = entry.raw
 
     def format(self) -> str:
@@ -126,16 +134,8 @@ class Publication:
             reference=self.reference(),
             key=html.escape(self._key),
             bib=html.escape(self._bib),
-            abstract_control=(
-                ABSTRACT_CONTROL_TEMPLATE.format(key=self._key)
-                if self._abstract is not None
-                else ""
-            ),
-            abstract=(
-                ABSTRACT_TEMPLATE.format(abstract=self._abstract)
-                if self._abstract is not None
-                else ""
-            ),
+            abstract_control=ABSTRACT_CONTROL_TEMPLATE.format(key=self._key),
+            abstract=ABSTRACT_TEMPLATE.format(abstract=self._abstract),
             pdf=(
                 PDF_TEMPLATE.format(pdf=self._pdf)
                 if self._pdf is not None
@@ -169,25 +169,38 @@ class Publication:
                 + ", and "
                 + display_authors[-1]
             )
-        author_line += ".  "
+        author_line += ", "
 
         title = self._reference_data.get("title").value.translate(
             str.maketrans("", "", "}{")
         )
-        booktitle = self._reference_data.get("booktitle").value.translate(
-            str.maketrans("", "", "}{")
-        )
+        publication_matter = None
+        match self._entry_type:
+            case "inproceedings":
+                publication_matter = (
+                    "<i>"
+                    + self._reference_data.get("booktitle").value.translate(
+                        str.maketrans("", "", "}{")
+                    )
+                    + "</i>"
+                )
+            case "mastersthesis":
+                school = self._reference_data.get("school").value
+                publication_matter = f"mathesis, {school}"
+            case _:
+                raise Exception(
+                    "Entry type @{} is not handled".format(self._entry_type)
+                )
 
         title_line = '"' + title + '", '
-        book_title_line = (
-            "<i>"
-            + booktitle
-            + "</i>, "
+        publication_matter_line = (
+            publication_matter
+            + ", "
             + self._reference_data.get("year").value
             + "."
         )
 
-        return author_line + title_line + book_title_line
+        return author_line + title_line + publication_matter_line
 
     def __lt__(self, other) -> bool:
         if (

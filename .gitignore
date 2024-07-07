@@ -7,6 +7,7 @@
 *.gz
 
 /public/
+/content/
 /static/ox-hugo/
 
 venv/
