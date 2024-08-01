@@ -20,15 +20,52 @@ Here is a link to my resume: [[../tex/Fletcher_Porter.pdf][Current October 2023]
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: blog
 :END:
-** DONE Diving into a CAD library with call tree analysis Part 2 :computer:occt:
+** DONE Building abstraction like the OSI model :msthesis:theory:mechatronic:
+CLOSED: [2024-07-18 Thu 03:15]
+:PROPERTIES:
+:EXPORT_FILE_NAME: building-abstraction-like-the-osi-model
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/OSI Network Model - Adapted Figure - Final - SVG.svg
+:END:
+/This is a part of a [[http:/tags/msthesis/][series]] where I share the work from my [[http:/publications/#Porter2024a][Master's thesis]]/.
+
+Layered abstraction models are an incredibly useful tool to reason about the myriad functions that even simple engineering systems must employ, especially when computers are involved.  They take highly unique engineering components, identify commanality among them, and what interfaces they provide, and then in chaining several of these abstractions together, an engineering practitioner is provided with a relatively simple model to describe complex behaviour.  Given how useful they are, how would one make a layered abstraction model?  The Open Systems Interface, or OSI, model for network communication has an answer in [[https://www.iso.org/standard/20269.html][ISO/IEC 7498-1]].
+
+Before diving into that, the OSI model is also useful for illustrating how layered abstraction works.  The OSI model understands network communication, like is done for the internet or industrial fieldbusses, to be a layer cake of abstractions over the physical communication media as shown in the following figure.  An individual tool may implement the behaviors and interfaces of of one or multiple layers.  The layering enables design freedom in how a network is implemented.  Communication over HTTP usually goes over a TCP transport through an IP network and to other destinations over WiFi or Ethernet, but [[https://doi.org/10.1109/ccnc08.2007.175][Lindgren et al.]] show that it's possible to send IP signals over CAN, and [[https://www.ethercat.org/en/technology.html#1.9.3][Ethernet over EtherCAT]] is possible as well.  High-level protocols can also be replaced to obtain a lower level of abstraction for performance or design flexibility, as was done for the video game [[https://github.com/id-Software/DOOM][/DOOM/]] in 1993, as well as for contemporary game engines like [[https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html][Godot]] or [[https://docs-multiplayer.unity3d.com/transport/current/about/][Unity]].
+
+#+NAME: fig:osi_network_model
+#+CAPTION: The low layers like Physical or Data Link are concerned with minute details of communication, like voltage signaling or byte endianess.  The high layers like Application provide network facilities without need to be understand the low-level phenomena.
+[[file:assets/OSI Network Model - Adapted Figure - Final - SVG.svg]]
+
+The OSI standard also motivates how to make a model like this (in §6.2.1).  In summary, each layer should be a discrete, separable item with a coherent function. Their interfaces should be succinct and only connect with adjacent layers. Fewer layers eases explanation and implementation and the choice of layers should be motivated by experience. This being a novel theory, experience will be the principal gain of future work, although case studies discussed later will also help. Helpfully, it offers a test to aid in determining layer boundaries. Layers should have a different level of abstraction in terms of /morphology/, /syntax/, and /semantics/.  This latter part is from Bloomfieldian linguistics, described in Leonard Bloomfield's /Language/.
+
+But what does that actually mean?  Consider an example.
+
+#+BEGIN_SRC C
+printf("I have %u cows\n", num_cows);
+#+END_SRC
+
+Morphology is concerned with the atomic elements of meaning. In C code, this means short tokens of text, here =printf=, =(=, ="I have %u cows\n"=, =,=, =num_cows=, =)=, and =;=. None of these can be reduced and still carry meaning---=pri= and =ntf= seperately don't combine to make =printf=. But these atoms of meaning needn't be text or language. As will be discussed, they can be cables, connectors, computer hardware, or anything that carries semantic meaning.
+
+When these tokens are combined into phrases, that's syntax. Syntax is the structure into which meaning is applied. The =printf= example is syntactically parsed by C compilers as in Figure [[fig:printf_syntax]]. The syntax tells that the postfix expression represented by the identifier =printf= has the argument list of ="I have %u cows\n"= (a string literal) and =num_cows= (an identifier). What any of this means is the domain of semantics.
+
+#+NAME: fig:printf_syntax
+#+CAPTION: The above printf example with syntax labeled according to [[https://archive.org/details/the-ansi-c-programming-language-by-brian-w.-kernighan-dennis-m.-ritchie.org][Kernighan & Ritchie C]].  The whole line is a postfix expression and the =printf= identifier is also a postfix expression and a primary expression on its own.  The tokens between parentheses are an argument expression list, and within that, the tokens between commas are at once many types of expressions that enable writing non-trivial code, but terminating as a primary expression, and then here as a string literal and an identifier.
+[[file:assets/printf_syntax.svg]]
+
+The semantics of =printf= are the expected behavior of the function, which can be gleaned from the documentation. It will say that =printf= means to convert and write output to the console under the control of a format string, according to Kernighan and Ritchie.  It will also say that the format string is the first expression in the argument expression list and that it is of type =char*=.  So ="I have %u cows\n"= is that format string, and the documentation will state that the second expression in the argument expression list, here =num_cows= will be formatted as a string and written to the output where conversion character, here =%u= is.  The logic of how the conversion characters and string formatting work are based on the format string's own morphology, syntax, and semantics, the study of which is left as an exercise to the reader.
+
+So to make a layered abstraction model like the OSI, first look for contrasts in morphology; are there fundamentally different atomic elements to components?  A mechanical system's atomic elements will be geometric bodies made from materials, whereas a power electronic system will be made from components that have a certain response to a voltage or current.  Second, how do the components syntactically relate to each other?  Mechanical components have reaction forces when in contact with other components, but electrical components make a network of components.  Lastly, what is the semantic meaning of their structure?  Mechanical components produce flexural rigidity or strength or convert one type of energy to another.  Electrical systems process, filter, or amplify electrical signals.  If functionality or tools vary greatly in these three aspects, it's quite likely that they could be seperated into abstraction layers, at least according to the OSI standard.
+
+
+** DONE Diving into a CAD library with call tree analysis, Part 2 :computer:occt:
 CLOSED: [2024-07-10 Wed 18:21]
 :PROPERTIES:
 :EXPORT_FILE_NAME: occt-call-tree-analysis-2
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/callgrind.out.11216.svg
 :END:
-Previously, I showed how you can study what functions call which in a library by using gdb catchpoints to observe a running process' call stack every time a syscall is made in the application.  That was useful to understand to understand the parts of the program related to external libraries, graphics, multi-threading, and code inserted by the compiler, but it didn't provide any insight into the mathematical core of the library which generally doesn't do any syscalls.  Here I'll be showing how you can do this with the tool callgrind.
+Previously, I showed how you can study which functions call what in a library by using gdb catchpoints to observe a running process' call stack every time a syscall is made in the application.  That was useful to understand the parts of the program related to external libraries, graphics, multi-threading, and compiler optimization, but it didn't provide any insight into the mathematical and algorithmic core of the library which generally doesn't do any syscalls.  Here I'll be showing how you can do this with the tool callgrind.
 
-[[https://valgrind.org/docs/manual/cl-manual.html][Callgrind]] is a tool that comes with the Valgrind software instrumentation framework that tracks not only which functions call which at all times, but also how often the functions are called and what portion of a program's run time is in a particular function.  This is very similar analysis to what I did with gdb, but it's able to capture the mathematical internals, though it doesn't capture much of the system-level goings on and it doesn't yield any insights into what arguments functions are called with.
+[[https://valgrind.org/docs/manual/cl-manual.html][Callgrind]] is a utility that comes with the Valgrind software instrumentation framework that tracks not only the function call graph, but also how often the functions are called and what portion of a program's run time is in a particular function.  This is very similar analysis to what I did with gdb, but thanks to Valgrind's magic, it's able to capture the mathematical internals, though it doesn't capture much of the system-level goings on and it doesn't yield any insights into what arguments functions are called with, which the previous method did.
 
 To use it, I executed the =DRAWEXE= executable as so.
 
@@ -37,9 +74,9 @@ To use it, I executed the =DRAWEXE= executable as so.
 valgrind --tool=callgrind DRAWEXE
 #+END_SRC
 
-I then ran the same experiment as before, having it render out a drill bit, moving the camera a little, and then closing out the program.  This was considerably slower than with gdb.  The render took something like 30 minutes and after a certain point, I was about to stop the experiment thinking it was hanging, but then something was printed to the console that showed that the process was running, so I knew the program was just running slow on account of the instrumentation.
+I then ran the same experiment as before, having it render out a drill bit, moving the camera a little, and then closing out the program.  This was considerably slower than with gdb.  The render took something like 30 minutes and after a certain point, I almost stopped the experiment thinking it was hanging until something was printed to the console, showing that it was just very slow.
 
-That produced a file =callgrind.out.11216=, where 11216 was the process ID of the running =DRAWEXE=.  It was 12 MB of data, less than what was generated by the gdb test with more information provided per function.  To parse the data, there's a helpful utility [[https://github.com/jrfonseca/gprof2dot][=gprof2dot=]] that parses output from many profiling tools, including callgrind.
+That produced a file =callgrind.out.11216=, where 11216 was the process ID of =DRAWEXE=.  It was 12 MB of data, less than what was generated by the gdb test with more information provided per function, probably because of high redundancy in the gdb method's archive.  To parse the data, there's a helpful utility [[https://github.com/jrfonseca/gprof2dot][=gprof2dot=]] that parses output from many profiling tools, including callgrind.
 
 #+BEGIN_SRC bash
 ./gprof2dot.py \
@@ -58,9 +95,17 @@ It outputs them as a [[https://graphviz.org/pdf/dotguide.pdf][DOT]] file which c
 
 The hottest path in the figure, running from =main= at the top in red, to the bottom of the orange =Draw_Interpretor::CallBackDataFunc::Invoke= and down to =buildsweep= in green appears to be related to creating the flutes for the drill bit.  Essentially everything here is related to geometric computation.
 
-Another insight from this image that can be gleaned from staring at this image for a long time is that polynomial evaluation takes up quite a large portion of runtime.  I looked into the source, and it uses [[https://en.wikipedia.org/wiki/Horner%27s_method][Horner's method]] to get the value of a polynomial, which turns $ax^2 + bx + c$ into $c + x(b + xa)$, which requires fewer multiplications and additions.  But as I understand it, [[https://en.wikipedia.org/wiki/De_Boor's_algorithm][De Boor's algorithm]] is somehow more performant for splines.  I wonder if that's actually true, or maybe there's a sub-optimal implementation here.
+Another insight from this image that can be gleaned from staring at this image for a long time is that polynomial evaluation takes up quite a large portion of runtime.  I looked into the source, and it uses [[https://en.wikipedia.org/wiki/Horner%27s_method][Horner's method]] to get the value of a polynomial, which turns $ax^3 + bx^2 + cx +d$ into $d + x(c + x(b + xa))$, which requires fewer multiplications, especially for large polynomials.  But as I understand it, [[https://en.wikipedia.org/wiki/De_Boor's_algorithm][De Boor's algorithm]] is somehow more performant for splines.  I wonder if that's actually true, or maybe there's a sub-optimal implementation here.
 
 This analysis omits any functions that were on paths that took up less that 0.5% of the program's runtime, but that can be changed with =gprof2dot=.  I'll provide the [[file:assets/callgrind.out.11216][callgrind output]] if you're interested in playing with this data.
+
+I think between callgrind and gdb, there's plenty of tooling to learn how this library works.  If I were to keep pulling on this call tree thread, I might look in to static analysis tools that get call trees from studying the source code.  I understand this command works for C++ files.
+
+#+BEGIN_SRC bash
+clang -S -emit-llvm main.cpp -o - | opt -analyze -dot-callgraph
+#+END_SRC
+
+However, OCCT has a very complex build system which would make doing this very complicated.  Not to mention that they don't seem to use LLVM-based compilers, so it's not even guaranteed to work.  But perhaps I'll explore this anyway at a later date.
 ** DONE Diving into a CAD library with call tree analysis     :computer:occt:
 CLOSED: [2024-07-07 Sun 11:57]
 :PROPERTIES:
@@ -197,7 +242,7 @@ print(data)
 #+RESULTS:
 : None
 
-** DONE Gravity Offload System :mechanical:electrical:control:nasa:jpl:robosimian:
+** DONE Gravity Offload System :mechatronic:mechanical:electrical:control:nasa:jpl:robosimian:
 CLOSED: [2020-03-16]
 :PROPERTIES:
 :EXPORT_FILE_NAME: gravity-offload-system
@@ -254,7 +299,7 @@ I was asked by the Los Angeles FIRST Tech Challenge organization to give a works
 
 [[file:assets/making_innovative_designs.pdf][These]] are the slides for the presentation I gave.  The topic was how to design innovative systems, especially for the robots that the students will be building for their competition.  I went over how to create a design specification given a design problem (an essential step for designing any system, innovative or not), defining what and innovation even is, identifying when it's useful or not to innovate, and throughout I showed off useful tools to try to understand design.
 
-** DONE A dolly with assisted stair climbing     :mechanical:electrical:ucsb:
+** DONE A dolly with assisted stair climbing :mechatronic:mechanical:electrical:ucsb:
 CLOSED: [2019-08-06]
 :PROPERTIES:
 :EXPORT_FILE_NAME: stair-climbing-dolly
@@ -305,7 +350,7 @@ I did a poll in 2018 asking people what characters they'd like to see playable i
 #+NAME: foo
 [[file:assets/characterPairs.png]]
 
-** DONE An Automatic Security Camera Lens Cleaner :mechanical:electrical:pneumatic:lunduniversity:
+** DONE An Automatic Security Camera Lens Cleaner :mechatronic:mechanical:electrical:pneumatic:lunduniversity:
 CLOSED: [2018-10-30]
 :PROPERTIES:
 :EXPORT_FILE_NAME: security-camera-window
