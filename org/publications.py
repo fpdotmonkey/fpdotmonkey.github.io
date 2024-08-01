@@ -67,7 +67,7 @@ ENTRY_TEMPLATE = """
 	{doi}
 	<input type="checkbox" class="bib-check" id="{key}bib" checked="">
         <div class="bib-src">
-	    <textarea readonly="true">{bib}</textarea>
+	    <textarea readonly="true" onclick="this.select()">{bib}</textarea>
         </div>
 	{abstract}
     </div>
