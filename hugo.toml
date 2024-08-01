@@ -6,3 +6,8 @@ sectionPagesMenu = 'main'
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[params]
+	[params.author]
+	name = "Fletcher Porter"
+	email = "me@fletcherporter.com"

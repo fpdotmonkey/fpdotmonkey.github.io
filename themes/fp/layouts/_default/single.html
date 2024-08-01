@@ -10,6 +10,9 @@
     <div>
       {{ .Content }}
     </div>
+    <div>
+	<i>Thought that was interesting?  Let me know by <a href="mailto:me@fletcherporter.com?subject=Re: {{ .Title }}">emailing me</a>.</i>
+    </div>
     <div id="tags">
 	{{ range $k, $v := .GetTerms "tags" }}
         {{- if $k }} · {{ end }}
