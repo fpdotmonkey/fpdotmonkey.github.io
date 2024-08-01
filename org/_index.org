@@ -3,7 +3,8 @@
 
 #+HUGO_BASE_DIR: ../
 
-#+CITE_EXPORT: csl fp.csl
+#+BIBLIOGRAPHY: general.bib
+#+CITE_EXPORT: csl
 
 * Homepage
 :PROPERTIES:
@@ -20,6 +21,43 @@ Here is a link to my resume: [[../tex/Fletcher_Porter.pdf][Current October 2023]
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: blog
 :END:
+** DONE A short and incomplete history of control system tooling :msthesis:history:control:
+CLOSED: [2024-08-01 Thu 19:45]
+:PROPERTIES:
+:EXPORT_FILE_NAME: a-short-and-incomplete-history-of-control-system-tooling
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/de-reamur-furnace.png
+:END:
+
+In discussing tooling for hardware control systems, it's interesting to talk about what tools have existed in the past.  Indeed, the history of control systems is much longer than would be naively assumed.  The development of control systems has been strongly linked with the development of tools for making them, from realizing controls with linkages connecting arcane sensors to outputs, to the advent of electrical mains enabling an easy-to-handle control medium, and the development of classical control theory and computers making development very accessible.
+
+Prior to the twentieth century, there weren't mechatronic systems as such, as the computer hadn't yet been invented, but there were controllers.  In the early eighteenth century, de Réamur created a device which regulated the temperature of a furnace which had a float on a vile of mercury that was connected through a linkage to a vent for the furnace [cite:@Bennett1996].  When the temperature went up or down, the level of the mercury would change, causing the float to move and for the vent to open or close to encourage the furnace toward a more desired temperature.  Today we would understand this as simple proportional control, but enacted by fantastic mechanical means.
+
+#+CAPTION: de Réamur's furnace, right, featured a lot of automation, like the aforementioned vent control, but also apparently bellows and other things.  Image from [cite:@Reaumur1722].
+[[file:assets/de-reamur-furnace.png]]
+
+Another iconic design was the mechanical governor of the eighteenth century that regulated steam engine speeds by exploiting centrifugal forces to raise and lower masses to impede changes in engine speed.  This was another proportional controller.  It was described formally by Maxwell in 1868 where he wrote about its dynamics and stability, noting that the primary stability criterion is that all the roots of the systems dynamics must have negative real parts [cite:@Maxwell1868].  Today we understand this as the Nyquist Criterion, but it was known at least 60 years before Nyquist wrote about it.
+
+There were even proportional-derivative (PD) controllers developed in this era.  The US Navy developed the Whitehead Torpedo in 1873 which was able to regulate its depth based on a setting made by sailors before firing and then was able to dive to that depth and maintain level before hitting a target [cite:@Barber1874].  It had a piston which was moved by hydrostatic pressures, and that piston connected to a control surface which set the torpedo's trajectory [cite:@Sears1873].  It also had a pendulum which hung freely under gravity and a linkage connected it to another control surface on the torpedo.  Together, these made for a PD controller since the angle of the torpedo was related to the rate of change of depth.
+
+These early controllers are incredibly fascinating designs, but their creativity was only exceeded by their complexity.  These designs coerced physical phenomena---gravity, pressure, temperature, rotation---into measurement signals that could be acted upon by a linkage-based controller.  Because the phenomena were myriad, there had to be a separate solution for every different type.  And the options for amplification were limited as well.  Mercury is not usually strong enough to open a furnace vent, so a lever must amplify the force.  But for a large furnace with a heavy door, there won't be a practical lever.  What would have eased the development of controllers would be a way to abstract phenomena into a single controllable signal.  Fortunately, the twentieth century saw the advent of exploitable electricity.
+
+With electricity, measurement could be done by finding a way to convert a phenomenon to an electrical signal and that could be provided to a controller.  Sperry was able to electrically measure the state of the sea, wind, and a ship state to create an automatic ship steering controller [cite:@Bennett1996].  Controllers also began to proliferate in industry where they manifested as boxes that could have measurements plugged in and a control signal would come out.  However, until Black developed feedback amplification [cite:@Black1934], it was challenging to reliably amplify low-power control signals to a power level suitable to operate a control actuator.
+
+One interesting case from this era of control was World War Two anti-aircraft guns.  These presented a difficult control problem.  Enemy aircraft had their position and velocity identified by radar (itself a difficult task at the time).  The controller had to anticipate where to aim the missile to intercept the target accounting for both the aircraft's and the missile's trajectories, all while tramming a heavy gun [cite:@Bennett1996].  Initially, the measurement signal was provided by a worker shouting positions to the gun from where the radar was, but this proved too much latency for effective control.  The engineers working on the gun and those working on the radar needed to collaborate to be able to develop controller where the gun and radar would work as one automatic, closed-loop system.
+
+In the post-war period, industrial controllers got much better thanks to the development of classical control theory in the 1930s and 40s.  However, electrical control proved to be challenging to implement.  Logic was typically implemented as huge relay circuits with dozens or hundreds of relays implementing logic [cite:@Parr1993].  These relays were prone to failure and would cause downtime on factory lines when they needed to be replaced.  The fundamental issue was that up until this time, control programs were immutable once commissioned.  If there was a change needed, it would incur a substantial recommissioning process.  This would be solved by re-programmable controllers run on computers.
+
+Industrial computers, or programmable logic controllers as they're called, were and are just regular computers, but the computer's package is made more robust to dust, temperature, vibrations, and other difficult environmental conditions found in industrial environments [cite:@Parr1993].  They also have specialized programming languages that are meant to model to how control programs with relay logic were conceived.  But one major disadvantage of electronic controllers was still an issue.  The wires that ran to and from sensors and actuators made for a Cthulhu-esque tangle of wires and cables that were expensive and difficult to work on.  This was improved by the final tooling innovation discussed here, fieldbus networks.
+
+Typically control and measurement signals consisted of $4..20~\mathrm{mA}$ analog signals and $24~\mathrm{V}$ digital signals.  This meant that every single sensor and actuator needed at least two wires, one for power and one for ground, going from it to the control box.  For large-scale controllers in factories, this was expensive and untenable to maintain [cite:@Thomesse2005].  To solve this, practitioners developed fieldbus networks to handle their input and output.  The earliest was CAMAC which was used in the 1960s for nuclear instrumentation [cite:@Thomesse2005].  Fieldbus networks provided benefits additional to wire cleanup.  They also enable distributing control information to many machines at once on a single network, monitoring the state of the factory floor from the design or business sections of the factory, and hierarchical control, such as described by the US National Bureau of Standards Automated Manufacturing Research Facility (AMRF) control hierarchy, where more abstract elements of an industrial plants command more concrete ones.  In particular, it describes a facility, consisting of production management and manufacturing engineering, commanding the shop, or factory floor, which in turn commands individual manufacturing cells, which then command the workstations within, and then at those workstations, operators command equipment [cite:@McLean1987].  This all can be seen in Figure [[fig:amrf_control_hierarchy]].  The control tooling discussed in this thesis is concerned with the business at the Equipment and Workstation level.
+
+#+NAME: fig:amrf_control_hierarchy
+#+CAPTION: The AMRF control hierarchy, boxed, abstracts different levels of behavior within a factory into discrete functions with well-defined interfaces between them.  Taken from [cite:@McLean1987].
+[[file:assets/amrf_control_hierarchy.png]]
+
+This history has been brief, it doesn't go into the more modern tooling in robotics and its dependencies on signal libraries like ROS [cite:@ROS2].  But what it has shown is the importance of abstraction.  Early mechanical controllers were challenging because every different physical phenomenon had to be separately and mechanically integrated into the controller.  Electricity simplified that.  Complex electrical controllers proved expensive and difficult to maintain and modify until computers moved logic to the re-programmable realm.  Finally, IO saw direct signaling abstracted to bus communication reducing massive tangles of wire to only a single cable.
+
+#+PRINT_BIBLIOGRAPHY:
 ** DONE Building abstraction like the OSI model :msthesis:theory:mechatronic:
 CLOSED: [2024-07-18 Thu 03:15]
 :PROPERTIES:
@@ -55,7 +93,6 @@ When these tokens are combined into phrases, that's syntax. Syntax is the struct
 The semantics of =printf= are the expected behavior of the function, which can be gleaned from the documentation. It will say that =printf= means to convert and write output to the console under the control of a format string, according to Kernighan and Ritchie.  It will also say that the format string is the first expression in the argument expression list and that it is of type =char*=.  So ="I have %u cows\n"= is that format string, and the documentation will state that the second expression in the argument expression list, here =num_cows= will be formatted as a string and written to the output where conversion character, here =%u= is.  The logic of how the conversion characters and string formatting work are based on the format string's own morphology, syntax, and semantics, the study of which is left as an exercise to the reader.
 
 So to make a layered abstraction model like the OSI, first look for contrasts in morphology; are there fundamentally different atomic elements to components?  A mechanical system's atomic elements will be geometric bodies made from materials, whereas a power electronic system will be made from components that have a certain response to a voltage or current.  Second, how do the components syntactically relate to each other?  Mechanical components have reaction forces when in contact with other components, but electrical components make a network of components.  Lastly, what is the semantic meaning of their structure?  Mechanical components produce flexural rigidity or strength or convert one type of energy to another.  Electrical systems process, filter, or amplify electrical signals.  If functionality or tools vary greatly in these three aspects, it's quite likely that they could be seperated into abstraction layers, at least according to the OSI standard.
-
 
 ** DONE Diving into a CAD library with call tree analysis, Part 2 :computer:occt:
 CLOSED: [2024-07-10 Wed 18:21]
