@@ -37,6 +37,7 @@ draft = false
      -webkit-user-select: all;
      user-select: all;
      width: 300px;
+     height: 4em;
  }}
 
  input[type=checkbox] {{
@@ -64,6 +65,7 @@ ENTRY_TEMPLATE = """
         <label class="bib-artifact" for="{key}bib"> [bib]</label>
         <a class="bib-artifact" href="#{key}"> [this]</a>
 	{pdf}
+        {url}
 	{doi}
 	<input type="checkbox" class="bib-check" id="{key}bib" checked="">
         <div class="bib-src">
@@ -76,6 +78,7 @@ ENTRY_TEMPLATE = """
 
 PDF_TEMPLATE = '<a class="bib-artifact" href="{pdf}">[pdf]</a>'
 DOI_TEMPLATE = '<a class="bib-artifact" href="https://doi.org/{doi}">[doi]</a>'
+URL_TEMPLATE = '<a class="bib-artifact" href="{url}">[url]</a>'
 ABSTRACT_CONTROL_TEMPLATE = '<input type="checkbox" class="abstract-check" id="{key}abs" checked="">\n<label class="bib-artifact" for="{key}abs">[abstract]</label>'
 ABSTRACT_TEMPLATE = '<blockquote class="abstract-src">{abstract}</blockquote>'
 
@@ -98,6 +101,7 @@ class Publication:
     _entry_type: str
     _reference_data: dict
     _doi: Optional[str]
+    _url: Optional[str]
     _abstract: Optional[str]
     _pdf: Optional[str]
 
@@ -127,6 +131,11 @@ class Publication:
             self._doi = str(doi.value)
         else:
             self._doi = None
+        url = self._reference_data.get("url")
+        if url is not None:
+            self._url = str(url.value)
+        else:
+            self._url = None
         self._bib = entry.raw
 
     def format(self) -> str:
@@ -146,6 +155,11 @@ class Publication:
                 if self._doi is not None
                 else ""
             ),
+            url=(
+                URL_TEMPLATE.format(url=self._url)
+                if self._url is not None
+                else ""
+            )
         )
 
     def reference(self) -> str:
