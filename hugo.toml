@@ -1,13 +1,13 @@
-baseURL = 'http://fletcherporter.com/'
+baseURL = 'http://blog.fletcherporter.com/'
 languageCode = 'en-us'
 title = 'Fletcher Porter'
 theme = 'fp'
 sectionPagesMenu = 'main'
 
-[markup.goldmark.renderer]
-unsafe = true
-
 [params]
 	[params.author]
 	name = "Fletcher Porter"
 	email = "me@fletcherporter.com"
+
+[markup.goldmark.renderer]
+unsafe = true
