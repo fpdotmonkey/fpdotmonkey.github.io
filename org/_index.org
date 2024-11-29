@@ -3,6 +3,8 @@
 
 #+HUGO_BASE_DIR: ../
 
+#+MACRO: call-to-action (eval (format "/Thought that was interesting?  Let me know by [[mailto:me@fletcherporter.com?subject=Re: %s][emailing me]]./" (nth 4 (org-heading-components))))
+
 #+BIBLIOGRAPHY: general.bib
 #+CITE_EXPORT: csl
 
@@ -58,6 +60,7 @@ Typically control and measurement signals consisted of $4..20~\mathrm{mA}$ analo
 
 This history has been brief, it doesn't go into the more modern tooling in robotics and its dependencies on signal libraries like ROS [cite:@ROS2].  But what it has shown is the importance of abstraction.  Early mechanical controllers were challenging because every different physical phenomenon had to be separately and mechanically integrated into the controller.  Electricity simplified that.  Complex electrical controllers proved expensive and difficult to maintain and modify until computers moved logic to the re-programmable realm.  Finally, IO saw direct signaling abstracted to bus communication reducing massive tangles of wire to only a single cable.
 
+{{{call-to-action}}}
 #+PRINT_BIBLIOGRAPHY:
 ** DONE Building abstraction like the OSI model :msthesis:theory:mechatronic:
 CLOSED: [2024-07-18 Thu 03:15]
@@ -146,7 +149,9 @@ clang -S -emit-llvm main.cpp -o - | opt -analyze -dot-callgraph
 #+END_SRC
 
 However, OCCT has a very complex build system which would make doing this very complicated.  Not to mention that they don't seem to use LLVM-based compilers, so it's not even guaranteed to work.  But perhaps I'll explore this anyway at a later date.
-** DONE Diving into a CAD library with call tree analysis     :computer:occt:
+
+{{{call-to-action}}}
+** DONE Diving into a CAD library with call tree analysis, Part 1 :computer:occt:
 CLOSED: [2024-07-07 Sun 11:57]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
@@ -237,6 +242,7 @@ In Mathematica, I assembled a graph by drawing an edge from a caller to a callee
 
 This gave really good view into how OCCT interacts with external libraries.  This could be a useful reference for ways to make the library leaner.  But it doesn't give much insight into the library's internals since it's primarily a math library, and math libraries don't do many system calls.  In the next blog post, I'll write about how [[https://valgrind.org/docs/manual/cl-manual.html][callgrind]] can be used to study a library's internals.
 
+{{{call-to-action}}}
 ** A complete list of every NASA mission
 I've had the understanding in my head that NASA was very active from its inception in the 50s through the early 70s with missions like Apollo, Voyager, and several Mariners, and then had some kind of lull in activity until the late 80s or mid 90s with the Space Shuttle, Hubble Space Telescope, and the mars rovers.  But I want to interrogate if there really was low activity in that range.
 
@@ -283,6 +289,7 @@ print(data)
 #+RESULTS:
 : None
 
+{{{call-to-action}}}
 ** DONE Gravity Offload System :mechatronic:mechanical:electrical:control:nasa:jpl:robosimian:
 CLOSED: [2020-03-16]
 :PROPERTIES:
@@ -308,6 +315,7 @@ Ultimately, the system was very successful. Almost all non-vertical forces were 
 #+CAPTION: On the right is the camera that detects RoboSimians position which is fed back into the controller.  Also visible are supporting electronic and the mechanical system in the back.
 [[file:assets/GOS_bottomIso.jpg]]
 
+{{{call-to-action}}}
 ** DONE Vine Robots                     :mechanical:pneumatic:softrobot:ucsb:
 CLOSED: [2020-03-16]
 :PROPERTIES:
@@ -328,6 +336,7 @@ The other was a clamp where one half was inside the tube and the other half was 
 #+CAPTION: A tool could be attached to the outer piece and could get data and power transmission to the inside of the tube through a contactless interfaces.
 [[file:assets/clamp.png]]
 
+{{{call-to-action}}}
 ** DONE Presenting at the 2019 FIRST Tech Challenge Kickoff Workshop :design:presentation:
 CLOSED: [2019-09-13]
 :PROPERTIES:
@@ -343,6 +352,7 @@ I was asked by the Los Angeles FIRST Tech Challenge organization to give a works
 
 [[file:assets/making_innovative_designs.pdf][These]] are the slides for the presentation I gave.  The topic was how to design innovative systems, especially for the robots that the students will be building for their competition.  I went over how to create a design specification given a design problem (an essential step for designing any system, innovative or not), defining what and innovation even is, identifying when it's useful or not to innovate, and throughout I showed off useful tools to try to understand design.
 
+{{{call-to-action}}}
 ** DONE A dolly with assisted stair climbing :mechatronic:mechanical:electrical:ucsb:
 CLOSED: [2019-08-06]
 :PROPERTIES:
@@ -370,7 +380,8 @@ The most fun part of this project was that I got to machine most of the parts my
 #+CAPTION: One of the drawings for a part that I made.  You can see it in figure [[fig:dolly_drivetrain]] holding each of the wheels on.
 [[file:assets/replacement_dolly_axel.png]]
 
-** DONE Computational Olympic rings             :programming:mathematica:fun:
+{{{call-to-action}}}
+** DONE Computational Olympic Rings             :programming:mathematica:fun:
 CLOSED: [2019-08-06]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
@@ -383,6 +394,7 @@ I've heard that the Olympic Rings logo's colors are based on the colors of the w
 #+CAPTION: The Olympic Rings according a color palette found by studying all the world's flags
 [[file:assets/olympic_rings.png]]
 
+{{{call-to-action}}}
 ** DONE Who should star in the next Shovel Knight game? :programming:mathematica:fun:
 CLOSED: [2019-08-17]
 :PROPERTIES:
@@ -397,6 +409,7 @@ I did a poll in 2018 asking people what characters they'd like to see playable i
 #+NAME: foo
 [[file:assets/characterPairs.png]]
 
+{{{call-to-action}}}
 ** DONE An Automatic Security Camera Lens Cleaner :mechatronic:mechanical:electrical:pneumatic:lunduniversity:
 CLOSED: [2018-10-30]
 :PROPERTIES:
@@ -414,6 +427,7 @@ I did the mechanical design of the system, sizing and selecting the compressor, 
 
 [[yt:nzDOJuoSqGU]]
 
+{{{call-to-action}}}
 ** DONE Boring 20km into Europa's surface           :mechanical:ice:nasa:jpl:
 CLOSED: [2016-08-26 Wed 16:29]
 :PROPERTIES:
@@ -434,6 +448,7 @@ This video shows a test I designed for verifying that the circular saw concept f
 
 [[yt:dgGWmtRm8hI][OWMS Saw Test]]
 
+{{{call-to-action}}}
 ** DONE OPALS Wikipedia Article                      :writing:ucsb:wikipedia:
 CLOSED: [2015-11-28 Sat 16:28]
 :PROPERTIES:
@@ -449,6 +464,7 @@ You can view it [[https://en.wikipedia.org/wiki/OPALS][here]].
 #+CAPTION: OPALS under construction (/Image credit JPL/Caltech via Wikimedia Commons/)
 [[file:assets/opals_under_construction.jpg]]
 
+{{{call-to-action}}}
 ** DONE A hand for a disaster recovery robot :mechanical:robosimian:nasa:jpl:
 CLOSED: [2015-10-21]
 :PROPERTIES:
@@ -470,6 +486,7 @@ Here is a video of RoboSimian at the 2015 DARPA Robotics Challenge Finals, demon
 
 [[yt:NSFm7sxDDiU][Team Robosimian Time Lapse - Day 1]]
 
+{{{call-to-action}}}
 * Publications
 # For now, this has to be done manually without org-mode...
 
