@@ -17,7 +17,7 @@
 
 [[mailto:me@fletcherporter.com][me@fletcherporter.com]] · +358 41 476 3167
 
-Here is a link to my resume: [[../tex/Fletcher_Porter.pdf][Current October 2023]]
+Here is a link to my resume: [[http://fletcherporter.com/Fletcher_Porter.pdf][Current November 2024]]
 
 * Blog
 :PROPERTIES:
