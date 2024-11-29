@@ -24,8 +24,9 @@ Here is a link to my resume: [[../tex/Fletcher_Porter.pdf][Current October 2023]
 ** DONE A short and incomplete history of control system tooling :msthesis:history:control:
 CLOSED: [2024-08-01 Thu 19:45]
 :PROPERTIES:
-:EXPORT_FILE_NAME: a-short-and-incomplete-history-of-control-system-tooling
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/de-reamur-furnace.png
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: a-short-and-incomplete-history-of-control-system-tooling
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail de-reamur-furnace.png
 :END:
 
 In discussing tooling for hardware control systems, it's interesting to talk about what tools have existed in the past.  Indeed, the history of control systems is much longer than would be naively assumed.  The development of control systems has been strongly linked with the development of tools for making them, from realizing controls with linkages connecting arcane sensors to outputs, to the advent of electrical mains enabling an easy-to-handle control medium, and the development of classical control theory and computers making development very accessible.
@@ -61,8 +62,9 @@ This history has been brief, it doesn't go into the more modern tooling in robot
 ** DONE Building abstraction like the OSI model :msthesis:theory:mechatronic:
 CLOSED: [2024-07-18 Thu 03:15]
 :PROPERTIES:
-:EXPORT_FILE_NAME: building-abstraction-like-the-osi-model
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/OSI Network Model - Adapted Figure - Final - SVG.svg
+:EXPORT_FILE_NAME: index 
+:EXPORT_HUGO_BUNDLE: building-abstraction-like-the-osi-model
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail OSI Network Model - Adapted Figure - Final - SVG.svg
 :END:
 /This is a part of a [[http:/tags/msthesis/][series]] where I share the work from my [[http:/publications/#Porter2024a][Master's thesis]]/.
 
@@ -97,8 +99,9 @@ So to make a layered abstraction model like the OSI, first look for contrasts in
 ** DONE Diving into a CAD library with call tree analysis, Part 2 :computer:occt:
 CLOSED: [2024-07-10 Wed 18:21]
 :PROPERTIES:
-:EXPORT_FILE_NAME: occt-call-tree-analysis-2
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/callgrind.out.11216.svg
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: occt-call-tree-analysis-2
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail callgrind.out.11216.svg
 :END:
 Previously, I showed how you can study which functions call what in a library by using gdb catchpoints to observe a running process' call stack every time a syscall is made in the application.  That was useful to understand the parts of the program related to external libraries, graphics, multi-threading, and compiler optimization, but it didn't provide any insight into the mathematical and algorithmic core of the library which generally doesn't do any syscalls.  Here I'll be showing how you can do this with the tool callgrind.
 
@@ -146,8 +149,9 @@ However, OCCT has a very complex build system which would make doing this very c
 ** DONE Diving into a CAD library with call tree analysis     :computer:occt:
 CLOSED: [2024-07-07 Sun 11:57]
 :PROPERTIES:
-:EXPORT_FILE_NAME: occt-call-tree-analysis
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/occt_call_tree_gdb.png
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: occt-call-tree-analysis
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail occt_call_tree_gdb.png
 :END:
 
 I've for a while been interested in taking on some kind of project involving 3D CAD.  The difficulty in that is all of the futzy computational geometry, when what I'm interested in is developing compelling tools for engineers to use.  This means I need a library, and ideally an open-source one so I can easily share my work.  Luckily, I found [[https://dev.opencascade.org/][Open Cascade Technology]], or OCCT.  It's a fully-featured, battle-tested CAD library with 30+ years of development, and it's available under the [[https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html][LGPL 2.1]] license.
@@ -282,8 +286,9 @@ print(data)
 ** DONE Gravity Offload System :mechatronic:mechanical:electrical:control:nasa:jpl:robosimian:
 CLOSED: [2020-03-16]
 :PROPERTIES:
-:EXPORT_FILE_NAME: gravity-offload-system
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/ContainerTopLevel.png
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: gravity-offload-system
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail ContainerTopLevel.png
 :END:
 
 In 2018 I did an internship at NASA Jet Propulsion Laboratory where I worked on a gravity-offload system to test mobility for a future rover mission to Saturn's moon Enceladus.
@@ -306,8 +311,9 @@ Ultimately, the system was very successful. Almost all non-vertical forces were 
 ** DONE Vine Robots                     :mechanical:pneumatic:softrobot:ucsb:
 CLOSED: [2020-03-16]
 :PROPERTIES:
-:EXPORT_FILE_NAME: vine-robots
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/clamp.png
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: vine-robots
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail clamp.png
 :END:
 
 In 2019, I worked with the [[https://www.hawkeslab.com/][Hawkes Lab]] at UC Santa Barbara on developing a tool mount for their soft vine-like robots. I ultimately made two prototypes.
@@ -325,8 +331,9 @@ The other was a clamp where one half was inside the tube and the other half was 
 ** DONE Presenting at the 2019 FIRST Tech Challenge Kickoff Workshop :design:presentation:
 CLOSED: [2019-09-13]
 :PROPERTIES:
-:EXPORT_FILE_NAME: ftc-kickoff-2019
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/workshop_in_progress.png
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: ftc-kickoff-2019
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail workshop_in_progress.png
 :END:
 
 I was asked by the Los Angeles FIRST Tech Challenge organization to give a workshop on engineering design to high school students at the annual kickoff for the new season of competitive high school robotics. I gave two sessions of a 45 minute presentation on how to create innovative components for their robots to an audience of a few dozen students in each session.
@@ -339,8 +346,9 @@ I was asked by the Los Angeles FIRST Tech Challenge organization to give a works
 ** DONE A dolly with assisted stair climbing :mechatronic:mechanical:electrical:ucsb:
 CLOSED: [2019-08-06]
 :PROPERTIES:
-:EXPORT_FILE_NAME: stair-climbing-dolly
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/dolly.jpg
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: stair-climbing-dolly
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail dolly.jpg
 :END:
 
 My bachelor thesis was to design and build a dolly that could carry a heavy, sensitive payload up and down stair with minimal force necessary from the user.  The solution I and my group came up with was to build a motorized dolly.
@@ -365,8 +373,9 @@ The most fun part of this project was that I got to machine most of the parts my
 ** DONE Computational Olympic rings             :programming:mathematica:fun:
 CLOSED: [2019-08-06]
 :PROPERTIES:
-:EXPORT_FILE_NAME: computational-olympic-rings
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/olympic_rings.png
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: computational-olympic-rings
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail olympic_rings.png
 :END:
 
 I've heard that the Olympic Rings logo's colors are based on the colors of the world's flags. With this project, I sought to find out if you would get a similar logo if you captured the colors of the world's flags and made the Olympic Rings logo with them.  I wrote [[file:assets/olympic_rings.pdf][this article]] to determine if that's true.  Turns out, it is!
@@ -377,8 +386,9 @@ I've heard that the Olympic Rings logo's colors are based on the colors of the w
 ** DONE Who should star in the next Shovel Knight game? :programming:mathematica:fun:
 CLOSED: [2019-08-17]
 :PROPERTIES:
-:EXPORT_FILE_NAME: shovel-knight-poll
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/characterPairs.png
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: shovel-knight-poll
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail characterPairs.png
 :END:
 
 I did a poll in 2018 asking people what characters they'd like to see playable in a future installment of Shovel Knight. Rather than just counting the votes directly and finding a result, I created a method to find out what types of characters people would like and ultimately come up with a list of characters that the community wants that appeals to the most people while also giving the developers some freedom to pick what characters they want. You can read about it [[file:assets/SK_poll_analysis.pdf][here]].
@@ -390,8 +400,9 @@ I did a poll in 2018 asking people what characters they'd like to see playable i
 ** DONE An Automatic Security Camera Lens Cleaner :mechatronic:mechanical:electrical:pneumatic:lunduniversity:
 CLOSED: [2018-10-30]
 :PROPERTIES:
-:EXPORT_FILE_NAME: security-camera-window
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/security_camera_lens_cleaner.jpg
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: security-camera-window
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail security_camera_lens_cleaner.jpg
 :END:
 
 During an exchange at Lund University in Sweden, I had a course project to develop a system for Axis Communications AB to clean the windows on their security cameras when rainwater or dirt gets on them. The system did this by compressing air onboard and spraying that air onto the camera window.
@@ -406,8 +417,9 @@ I did the mechanical design of the system, sizing and selecting the compressor, 
 ** DONE Boring 20km into Europa's surface           :mechanical:ice:nasa:jpl:
 CLOSED: [2016-08-26 Wed 16:29]
 :PROPERTIES:
-:EXPORT_FILE_NAME: owms
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/owms_level_wind.png
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: owms
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail owms_level_wind.png
 :END:
 During an internship at NASA Jet Propulsion Laboratory in 2016, I designed a system to test a concept for a probe to explore inside of Jupiter's moon Europa. It uses a circular saw rotating about the vertical axis to create a borehole in ice, which on Europa would be ~20 km deep. I was an author of a paper on this system published in IEEE aerospace, available [[https://ieeexplore.ieee.org/document/7943863][here]].
 
@@ -425,8 +437,9 @@ This video shows a test I designed for verifying that the circular saw concept f
 ** DONE OPALS Wikipedia Article                      :writing:ucsb:wikipedia:
 CLOSED: [2015-11-28 Sat 16:28]
 :PROPERTIES:
-:EXPORT_FILE_NAME: opals-wikipedia
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/opals_under_construction.jpg
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: opals-wikipedia
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail opals_under_construction.jpg
 :END:
 
 During fall quarter of my freshman year at UCSB, I wrote a Wikipedia article for a writing class on the [[https://www.jpl.nasa.gov/missions/optical-payload-for-lasercomm-science-opals][Optical PAyload for Lasercomm Science (OPALS)]] mission out of JPL/Caltech.
@@ -439,8 +452,9 @@ You can view it [[https://en.wikipedia.org/wiki/OPALS][here]].
 ** DONE A hand for a disaster recovery robot :mechanical:robosimian:nasa:jpl:
 CLOSED: [2015-10-21]
 :PROPERTIES:
-:EXPORT_FILE_NAME: hand-disaster-recovery-robot
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail /ox-hugo/cam_hand_render.jpg
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: hand-disaster-recovery-robot
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail cam_hand_render.jpg
 :END:
 
 In summer 2014, I worked at NASA Jet Propulsion Laboratory in their Robotic Vehicles and Manipulators lab. I worked on the design for a so-called Cam Hand for the disaster recovery robot, [[https://www.jpl.nasa.gov/robotics-at-jpl/robosimian][RoboSimian]].

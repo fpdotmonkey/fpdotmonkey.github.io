@@ -17,7 +17,7 @@
 
 
 body {
-    margin: 2em;
+    margin: min(2em, 5%);
     auto;
     max-width: 40em;
     font-size: 18pt;
@@ -25,6 +25,7 @@ body {
     color: #000000;
     padding: 0 10px;
     font-family: BonaNova, serif;
+    font-display: swap;
 }
 
 b {
@@ -109,4 +110,5 @@ h3.latest-posts {
 
 .thumbnail {
     width: 300px;
+    height: auto;
 }
