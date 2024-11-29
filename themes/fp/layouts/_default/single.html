@@ -13,7 +13,7 @@
     <div id="tags">
 	{{ range $k, $v := .GetTerms "tags" }}
         {{- if $k }} · {{ end }}
-        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ .Name }}</a>
+        <a href="{{ . | urlize }}" class="tag">{{ .Name }}</a>
 	{{- end }}
     </div>
     {{ with .Site.Config.Services.Disqus.Shortname }}

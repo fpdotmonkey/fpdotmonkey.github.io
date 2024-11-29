@@ -69,8 +69,6 @@ CLOSED: [2024-07-18 Thu 03:15]
 :EXPORT_HUGO_BUNDLE: building-abstraction-like-the-osi-model
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail OSI Network Model - Adapted Figure - Final - SVG.svg
 :END:
-/This is a part of a [[http:/tags/msthesis/][series]] where I share the work from my [[http:/publications/#Porter2024a][Master's thesis]]/.
-
 Layered abstraction models are an incredibly useful tool to reason about the myriad functions that even simple engineering systems must employ, especially when computers are involved.  They take highly unique engineering components, identify commanality among them, and what interfaces they provide, and then in chaining several of these abstractions together, an engineering practitioner is provided with a relatively simple model to describe complex behaviour.  Given how useful they are, how would one make a layered abstraction model?  The Open Systems Interface, or OSI, model for network communication has an answer in [[https://www.iso.org/standard/20269.html][ISO/IEC 7498-1]].
 
 Before diving into that, the OSI model is also useful for illustrating how layered abstraction works.  The OSI model understands network communication, like is done for the internet or industrial fieldbusses, to be a layer cake of abstractions over the physical communication media as shown in the following figure.  An individual tool may implement the behaviors and interfaces of of one or multiple layers.  The layering enables design freedom in how a network is implemented.  Communication over HTTP usually goes over a TCP transport through an IP network and to other destinations over WiFi or Ethernet, but [[https://doi.org/10.1109/ccnc08.2007.175][Lindgren et al.]] show that it's possible to send IP signals over CAN, and [[https://www.ethercat.org/en/technology.html#1.9.3][Ethernet over EtherCAT]] is possible as well.  High-level protocols can also be replaced to obtain a lower level of abstraction for performance or design flexibility, as was done for the video game [[https://github.com/id-Software/DOOM][/DOOM/]] in 1993, as well as for contemporary game engines like [[https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html][Godot]] or [[https://docs-multiplayer.unity3d.com/transport/current/about/][Unity]].
@@ -169,7 +167,7 @@ I tried to see if this was possible, and I learned about [[https://sourceware.or
 
 The experiment I ran was to run the =DRAWEXE= example, render a drill bit, rotate the camera around a bit, and then close the application.  To set up, I launched =gdb= as so.
 
-#+BEGIN_SRC 
+#+BEGIN_SRC txt
 # before this, I made a debug build
 $ . env.sh d # this sets up the OCCT environment to run debug builds
 $ gdb DRAWEXE
@@ -187,7 +185,7 @@ end
 
 This produced a 3.7 MB data file.  The stack traces generally looked like this.
 
-#+BEGIN_SRC 
+#+BEGIN_SRC txt
 #0  __lseek64 (fd=3, offset=0, whence=0) at ../sysdeps/unix/sysv/linux/lseek64.c:40
 #1  0x00007ffff7693317 in _IO_new_file_seekoff (fp=0x5555555c9260, offset=0, dir=<optimized out>, mode=<optimized out>) at ./libio/libioP.h:1030
 [...]
