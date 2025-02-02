@@ -28,6 +28,7 @@ CLOSED: [2024-08-01 Thu 19:45]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: a-short-and-incomplete-history-of-control-system-tooling
+:CUSTOM_ID: a-short-and-incomplete-history-of-control-system-tooling
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail de-reamur-furnace.png
 :END:
 
@@ -67,6 +68,7 @@ CLOSED: [2024-07-18 Thu 03:15]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index 
 :EXPORT_HUGO_BUNDLE: building-abstraction-like-the-osi-model
+:CUSTOM_ID: building-abstraction-like-the-osi-model
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail OSI Network Model - Adapted Figure - Final - SVG.svg
 :END:
 Layered abstraction models are an incredibly useful tool to reason about the myriad functions that even simple engineering systems must employ, especially when computers are involved.  They take highly unique engineering components, identify commanality among them, and what interfaces they provide, and then in chaining several of these abstractions together, an engineering practitioner is provided with a relatively simple model to describe complex behaviour.  Given how useful they are, how would one make a layered abstraction model?  The Open Systems Interface, or OSI, model for network communication has an answer in [[https://www.iso.org/standard/20269.html][ISO/IEC 7498-1]].
@@ -102,6 +104,7 @@ CLOSED: [2024-07-10 Wed 18:21]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: occt-call-tree-analysis-2
+:CUSTOM_ID: occt-call-tree-analysis-2
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail callgrind.out.11216.svg
 :END:
 Previously, I showed how you can study which functions call what in a library by using gdb catchpoints to observe a running process' call stack every time a syscall is made in the application.  That was useful to understand the parts of the program related to external libraries, graphics, multi-threading, and compiler optimization, but it didn't provide any insight into the mathematical and algorithmic core of the library which generally doesn't do any syscalls.  Here I'll be showing how you can do this with the tool callgrind.
@@ -154,6 +157,7 @@ CLOSED: [2024-07-07 Sun 11:57]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: occt-call-tree-analysis
+:CUSTOM_ID: occt-call-tree-analysis
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail occt_call_tree_gdb.png
 :END:
 
@@ -293,6 +297,7 @@ CLOSED: [2020-03-16]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: gravity-offload-system
+:CUSTOM_ID: gravity-offload-system
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail ContainerTopLevel.png
 :END:
 
@@ -319,6 +324,7 @@ CLOSED: [2020-03-16]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: vine-robots
+:CUSTOM_ID: vine-robots
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail clamp.png
 :END:
 
@@ -340,6 +346,7 @@ CLOSED: [2019-09-13]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: ftc-kickoff-2019
+:CUSTOM_ID: ftc-kickoff-2019
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail workshop_in_progress.png
 :END:
 
@@ -356,6 +363,7 @@ CLOSED: [2019-08-06]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: stair-climbing-dolly
+:CUSTOM_ID: stair-climbing-dolly
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail dolly.jpg
 :END:
 
@@ -384,6 +392,7 @@ CLOSED: [2019-08-06]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: computational-olympic-rings
+:CUSTOM_ID: computational-olympic-rings
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail olympic_rings.png
 :END:
 
@@ -398,6 +407,7 @@ CLOSED: [2019-08-17]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: shovel-knight-poll
+:CUSTOM_ID: shovel-knight-poll
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail characterPairs.png
 :END:
 
@@ -413,6 +423,7 @@ CLOSED: [2018-10-30]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: security-camera-window
+:CUSTOM_ID: security-camera-window
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail security_camera_lens_cleaner.jpg
 :END:
 
@@ -431,6 +442,7 @@ CLOSED: [2016-08-26 Wed 16:29]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: owms
+:CUSTOM_ID: owms
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail owms_level_wind.png
 :END:
 During an internship at NASA Jet Propulsion Laboratory in 2016, I designed a system to test a concept for a probe to explore inside of Jupiter's moon Europa. It uses a circular saw rotating about the vertical axis to create a borehole in ice, which on Europa would be ~20 km deep. I was an author of a paper on this system published in IEEE aerospace, available [[https://ieeexplore.ieee.org/document/7943863][here]].
@@ -452,6 +464,7 @@ CLOSED: [2015-11-28 Sat 16:28]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: opals-wikipedia
+:CUSTOM_ID: opals-wikipedia
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail opals_under_construction.jpg
 :END:
 
@@ -468,6 +481,7 @@ CLOSED: [2015-10-21]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: hand-disaster-recovery-robot
+:CUSTOM_ID: hand-disaster-recovery-robot
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail cam_hand_render.jpg
 :END:
 
