@@ -23,6 +23,31 @@ Here is a link to my resume: [[http://fletcherporter.com/Fletcher_Porter.pdf][Cu
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: blog
 :END:
+** Org Mode is cool                                        :computer:website:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: org-mode-is-cool
+:CUSTOM_ID: org-mode-is-cool
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail
+:END:
+
+I've recently been doing work to bring this website live, so it seems reasonable to talk about how I've built this website.  I'll talk about how I write posts using [[https://orgmode.org/][Org Mode]], how those drafts are built into web-friendly HTML using [[https://ox-hugo.scripter.co/][ox-hugo]] and [[https://gohugo.io/][Hugo]], and then how I host the website on [[https://www.dreamhost.com/][Dreamhost]].
+
+The whole of the website's content is written in a single file, which you can see [[https://github.com/fpdotmonkey/fpdotmonkey.github.io/blob/migrate-to-hugo/org/_index.org][here]].  It's written in a tree structure, like so.
+
+#+BEGIN_SRC org
+,* Section
+,** Post 1
+Contents of post 1
+,** Post 2
+Contents of post 2
+,* Next section
+,** Further posts...
+#+END_SRC
+
+# This is neat since it makes it really to see what I've written before and to make continuations on previous work, like in [[*Diving into a CAD library with call tree analysis, Part 1][Diving into a CAD library with call tree analysis, Part 1]] and [[*Diving into a CAD library with call tree analysis, Part 2][Part 2]].
+
+{{{call-to-action}}}
 ** DONE A short and incomplete history of control system tooling :msthesis:history:control:
 CLOSED: [2024-08-01 Thu 19:45]
 :PROPERTIES:
