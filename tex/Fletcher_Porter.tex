@@ -19,9 +19,16 @@
 \usepackage{url}
 \usepackage{etoolbox}
 \usepackage{siunitx}
+\usepackage[bibstyle=authortitle,sorting=none,maxnames=999]{biblatex}
+
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
 \pagenumbering{gobble}
+
+\addbibresource{org/publications.bib}
+\defbibheading{bibliography}[\bibname]{
+  \headingstyleJobs{#1}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,17 +114,20 @@
 \infostyle{+358 41 476 3167 · \href{mailto:me@fletcherporter.com}{me@fletcherporter.com} · \url{http://fletcherporter.com}}
 
 \overview{
-I'm a jack-of-all-trades engineer with particular skill in mechanical design and software
-development.  I love to get my hands dirty in every piece
-of a system.  I find joy in having a broad understanding of everything and
-intimate knowledge of a few things I get to own.
+I'm a jack-of-all-trades engineer with particular skill in mechanical design and software development.  I love to get my hands dirty in every piece of a system.  I find joy in having a broad understanding of everything and intimate knowledge of a few things I get to own.
 }
 
 \headingstyleJobs{Education}
 
-\jobtitle{Aalto University}{MS Mechanical Engineering}{Expected June 2024}
+\jobtitle{Aalto University}{Ph.D Mechanical Engineering}{Expected 2029}
 \begin{itemize}
-    \item Specializing in Mechatronics
+  \item Studying improving software tooling for the development of mechatronic systems
+  \item Supervised by Prof. Jari Vepsäläinen
+\end{itemize}
+
+\jobtitle{Aalto University}{MS Mechanical Engineering}{December 2024}
+\begin{itemize}
+    \item Wrote thesis ``\href{https://aaltodoc.aalto.fi/items/d2e174be-633b-4896-a8c2-fa90887524a5}{A Model for Selecting Software Tools for Mechatronic Systems}''
 \end{itemize}
 
 \jobtitle{University of California, Santa Barbara (UCSB)}{BS Mechanical Engineering}{Sept. 2019}
@@ -130,28 +140,29 @@ intimate knowledge of a few things I get to own.
 %\jobtitle{Monrovia High School}{High School Diploma}{Graduated June 2015}
 %\vspace{1em}
 
-\certification{English}{Native speaker} \certification{Finnish}{A2} \vspace{5pt}
+\certification{English}{Native speaker} \certification{Finnish}{B1} \vspace{5pt}
 
 \certification{Certified SolidWorks Associate (CSWA)}{Jan. 2020} \vspace{5pt}
 
 
 \headingstyleJobs{Experience}
 
-\jobtitle{Aalto Fluid Power Lab}{Research Assistant}{Oct. 2022 – Present}
+\jobtitle{Aalto University Fluid Power Lab}{Doctoral Researcher, Research Assistant}{Oct. 2022 – Present}
 \begin{itemize}
-	\item Developed control systems for industrial hydraulics with Beckhoff TwinCAT \\
-	\item Integrated CAN and EtherCAT buses into a single system \\
-	\item Developed communication with external software with TCP sockets \\
-	\item Designing a shaft to integrate an ABB motor into an industrial hydraulic system
+  \item Developing an industrial automation framework using the Rust programming language \\
+  \item Interviewing R\&D engineers on how they reason about the quality of the electronic tools \\
+  \item Developed control systems for industrial hydraulics with Beckhoff TwinCAT \\
+  \item Integrated CAN and EtherCAT buses into a single system \\
+  \item Developed communication with external software with TCP sockets \\
 \end{itemize}
 
 \jobtitle{Oblong Inc.}{Software Developer}{Dec. 2020 – March 2022}
 \begin{itemize}
 	\item Qualified new hardware for a complex, embedded, multimedia, hardware/software device \\
-	%\item Collaborated on a hybrid remote/in-person team in the midst of the COVID-19 pandemic \\
-	%\item Improved logging on products to quicken Oblong's response to customer issues \\
+	\item Collaborated on a hybrid remote/in-person team in the midst of the COVID-19 pandemic \\
+	\item Improved logging on products to quicken Oblong's response to customer issues \\
 	\item Debugged audio issues involving Linux, PulseAudio, Cisco hardware, and Oblong's hardware \\
-	%\item Took on maintainance and development of Oblong's legacy products and  software tools \\
+	\item Took on maintainance and development of Oblong's legacy products and  software tools \\
 	\item Developed polyglot software in Python, Go, Bash, C++, C, Ruby, JavaScript, and TypeScript \\
 \end{itemize}
 
@@ -161,103 +172,51 @@ intimate knowledge of a few things I get to own.
 	\item Designed in CAD a mechanical system to offload gravity with minimal lateral forces \\
 	\item Prepared engineering drawings of mechanical components to send to vendors to machine \\
 	\item Designed an electrical system to distribute power to microprocessors that control the system \\
-%	\item Assembled the mechanical and electrical systems by hand \\
+	\item Assembled the mechanical and electrical systems by hand \\
 	\item Wrote automatic control programs and documentation in Python and Arduino C \\
-	\item Developed a proposal for \href{https://portfolium.com/entry/owms-deep-subsurface-access-level-wind}{a probe to bore \textasciitilde$\SI{20}{\kilo\meter}$ into Europa's icy crust} \\
-	%\item Designed and executed a test to demonstrate the feasibility of the proposed system \\
-%	\item Created drawings for parts to manufacture and to get ROM quotes \\
+	\item Developed a proposal for \href{https://blog.fletcherporter.com/blog/owms/}{a probe to bore \textasciitilde$\SI{20}{\kilo\meter}$ into Europa's icy crust} \\
+	\item Designed and executed a test to demonstrate the feasibility of the proposed system \\
+	\item Created drawings for parts to manufacture and to get ROM quotes \\
 	\item Co-authored ``\href{https://www.researchgate.net/publication/317702124_A_deep_subsurface_ice_probe_for_Europa}{A deep subsurface ice probe for Europa}'' in IEEE Aerospace Conference 2017 \\
+	\item Designed components of \href{https://blog.fletcherporter.com/blog/hand-disaster-recovery-robot/}{a robot manipulator} in CAD and iterated on the design
 \end{itemize}
 
 \jobtitle{Tetra Bio Distributed}{Software Engineer, Board Secretary}{April 2020 – Jan. 2021}
 \begin{itemize}
 	\item Developed \href{https://github.com/tetrabiodistributed/project-tetra-display}{a software display} to show respiration descriptors of COVID-19 patients to doctors \\
-	%\item Designed a web server to send patient data to a browser front end using Python and Go \\
-	%\item Developed a Continuous Integration system to automatically test the software as it's checked in \\
+	\item Designed a web server to send patient data to a browser front end using Python and Go \\
+	\item Developed a Continuous Integration system to automatically test the software \\
 	\item Wrote drivers for a pressure and a flow sensor for an embedded Linux system \\
-	\item Made signal processing tools to turn sensor data into patient state descriptors useful to doctors \\
-%	\item Prepared IRS Form 1023-EZ to successfully get the organization 501(c)(3) non-profit status \\
+	\item Made signal processing tools to present sensor data to doctors \\
+	\item Prepared IRS Form 1023-EZ to successfully get the organization 501(c)(3) non-profit status \\
 \end{itemize}
 
 \jobtitle{Hawkes Group, UCSB}{Undergraduate Researcher}{March 2019 – Sept. 2019}
 \begin{itemize}
-	\item Iteratively designed in CAD a fixture to hold tools on the end of \href{https://portfolium.com/entry/vine-robot-tool-mount}{a soft, vine-like robot} \\
-	\item Built these fixtures by making them on a 3D printer and assembling them \\
-	\item Developed models for jump height of a carbon fiber-bow jumping robot
-%	\item Documented the design process and results \\
+  \item Iteratively designed in CAD a fixture to hold tools on the end of \href{https://blog.fletcherporter.com/blog/vine-robots/}{a soft, vine-like robot} \\
+  \item Built these fixtures by making them on a 3D printer and assembling them \\
+  \item Developed models for jump height of a carbon fiber-bow jumping robot \\
+  \item Worked under the supervision of Prof. Elliot Hawkes \\
 \end{itemize}
 
 \jobtitle{Capstone Course Design Project, UCSB}{Student Engineer}{Sept. 2018 – June 2019}
 \begin{itemize}
-	\item Designed in SolidWorks from requirements \href{https://portfolium.com/entry/automatic-stair-climbing-vehicle}{a stair-climbing dolly} that carries heavy payloads \\
+	\item Designed in SolidWorks from requirements \href{https://blog.fletcherporter.com/blog/stair-climbing-dolly/}{a stair-climbing dolly} that carries heavy payloads \\
 	\item Machined most custom components by hand on a mill and lathe from drawings I made \\
 %	\item Reported the design process and results \\
 \end{itemize}
 
-%\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{June 2016 – Aug. 2016}
-%\begin{itemize}
-%	\item Developed a proposal for \href{https://portfolium.com/entry/owms-deep-subsurface-access-level-wind}{a probe to bore \textasciitilde$\SI{20}{\kilo\meter}$ into Europa's icy crust} \\
-%	\item Designed and executed a test to demonstrate the feasibility of the proposed system \\
-%	\item Created drawings for parts to manufacture and to get ROM quotes \\
-%	\item Coauthored ``\href{https://ieeexplore-ieee-org.proxy.library.ucsb.edu:9443/stamp/stamp.jsp?tp=&arnumber=7943863}{A deep subsurface ice probe for Europa}'' in IEEE Aerospace Conference 2017 \\
-%\end{itemize}
+\jobtitle{UCSB Dynamic Robotics Laboratory}{Undergraduate Researcher}{Oct. 2015 – Sep. 2016}
+\begin{itemize}
+	\item Worked in the UCSB robotics lab with Prof. Katie Byl
+	\item Developed roller skates for RoboSimian to significantly increase locomotive speed
+\end{itemize}
 
-%\jobtitle{Mechatronics Course Design Project (LTH)}{Student Engineer}{Aug. 2017 – May 2018}
-%\begin{itemize}
-%	\item Designed and built \href{https://portfolium.com/entry/automatic-security-camera-lens-cleaner}{a mechanical system for cleaning security cameras}
-%	\item Documented the design process and results in a report
-%\end{itemize}
-
-%\jobtitle{NASA Jet Propulsion Laboratory}{Robotics Intern}{June 2014 – Aug. 2014}
-%\begin{itemize}
-%	\item Designed components of \href{https://portfolium.com/entry/rescue-robots}{a robot manipulator} in CAD and iterated on the design
-%%	\item Worked in the UCSB robotics lab with Katie Byl
-%%	\item Developed roller skates for RoboSimian to significantly increase locomotive speed
-%\end{itemize}
-
-%\jobtitle{Robotic Planning and Kinematics Class}{UCSB ME 179P}{Jan. 2019 – March 2019}
-%\begin{itemize}
-%	\item Wrote \href{https://github.com/fpdotmonkey/ME179P}{planning and kinematics programs} in Python
-%	\item Documented code with Python docstrings
-%\end{itemize}
-
-%\jobtitle{Robotic Controls Class}{UCSB ME 179D}{Sept. 2018 – Dec. 2018}
-%\begin{itemize}
-%	\item Wrote control programs for robot arms in Matlab and Simulink
-%\end{itemize}
-
-%\jobtitle{CNC Router PCB Fixture}{Personal Project}{2019-10-16 – 2019-11-08}
-%\begin{itemize}
-%	\item Designed a fixture in OnShape to hold a PCB while it's being machined
-%	\item Created manufacturing drawings of all custom components
-%	\item Machined components on a CNC router
-%\end{itemize}
-
-%\jobtitle{FIRST Tech Challenge}{Student Robotics Mentor}{June 2015–Present}
-%\begin{itemize}
-%	\item Teaching high school students engineering design
-%\end{itemize}
-
-%\jobtitle{Finite Element Method Course Projects}{}{Aug. 2017–Present}
-%\begin{itemize}
-%	\item Writing FEM simulation programs in Matlab using the CALFEM package
-%\end{itemize}
-
-%\jobtitle{Computer Music Generation System}{}{Sept.–April 2014}
-%\begin{itemize}
-%	\item Wrote a C++ program that produced audio tones by sending signals to the computer's sound card
-%\end{itemize}
+\nocite{Porter2024a,Porter2024,Porter2023,Wilcox2017}
+\printbibliography[title=Publications]
 
 
-%\headingstyleJobs{Publications}
-%
-%\vspace{-9pt}
-%\nocite{OWMS}
-%\bibliography{bananas}
-%\bibliographystyle{ieeetr}
-
-
-\textit{A portfolio of my work can be found at} \url{http://portfolium.com/fporter/portfolio}
+\textit{A portfolio of my work can be found at} \url{https://blog.fletcherporter.com}
 
 \end{flushleft}
 \end{document}  
